@@ -1,4 +1,6 @@
 module.exports = {
+  // 发布到github page后路径需要有前缀'blog'
+  base: '/blog/',
   title: `yams's blog`,
   description: `yams's blog`,
   head: [
