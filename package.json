@@ -26,6 +26,8 @@
     "husky": "^3.1.0"
   },
   "husky": {
-    "pre-push": "sh deploy.sh"
+    "hooks": {
+      "pre-push": "sh deploy.sh"
+    }
   }
 }
