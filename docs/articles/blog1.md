@@ -10,3 +10,5 @@ console.log()
 console.log()
 console.log()
 ```
+
+<img :src="$withBase('/logo.png')" alt="foo" />
