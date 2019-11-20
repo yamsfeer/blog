@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /logo.png
+heroImage: $withBase/logo.png
 heroText: yams's blog
 tagline: Do something that you think is cool
 actionText: enter
