@@ -17,16 +17,17 @@ module.exports = {
       { text: 'Github', link: 'https://github.com/melogra' }
     ],
     sidebar: {
-      '/articles/': [
+      '/articles/html/': [
         {
           title: 'html',
           collapsable: true,
           sidebarDepth: 2,
           children: [
-            ['blog1', 'blog1'],
-            ['blog2', 'blog2']
+            'blog1'
           ]
-        },
+        }
+      ],
+      '/articles/css/': [
         {
           title: 'css',
           collapsable: true,
@@ -35,12 +36,17 @@ module.exports = {
             ['blog1', 'blog1'],
             ['blog2', 'blog2']
           ]
-        },
+        }
+      ],
+      '/articles/javascript/': [
         {
           title: 'javascript',
           collapsable: true,
           sidebarDepth: 2,
-          children: ['blog1']
+          children: [
+            ['blog1', 'blog1'],
+            ['blog2', 'blog2']
+          ]
         }
       ]
     },
