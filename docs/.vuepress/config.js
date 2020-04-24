@@ -17,33 +17,29 @@ module.exports = {
       { text: 'Github', link: 'https://github.com/melogra' }
     ],
     sidebar: {
-      '/articles/html/': [
+      '/articles/': [
         {
           title: 'html',
           collapsable: true,
           sidebarDepth: 2,
           children: [
-            'blog1'
+            'html/blog1'
           ]
-        }
-      ],
-      '/articles/css/': [
+        },
         {
           title: 'css',
           collapsable: true,
           sidebarDepth: 2,
           children: [
-            ['blog1', 'blog1']
+            ['css/blog1']
           ]
-        }
-      ],
-      '/articles/javascript/': [
+        },
         {
           title: 'javascript',
           collapsable: true,
           sidebarDepth: 2,
           children: [
-            ['blog1', 'blog1']
+            ['javascript/blog1']
           ]
         }
       ]
