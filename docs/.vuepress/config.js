@@ -13,6 +13,7 @@ module.exports = {
   },
   themeConfig: {
     searchMaxSuggestions: 10,
+    displayAllHeaders:true,
     nav: [
       { text: 'Github', link: 'https://github.com/melogra' }
     ],
@@ -23,7 +24,8 @@ module.exports = {
           collapsable: true,
           sidebarDepth: 2,
           children: [
-            'html/blog1'
+            // ['路由', '侧边栏标题']
+            ['html/blog1', '侧边栏标题']
           ]
         },
         {
@@ -31,7 +33,7 @@ module.exports = {
           collapsable: true,
           sidebarDepth: 2,
           children: [
-            ['css/blog1']
+            ['css/blog1', 'blog1']
           ]
         },
         {
@@ -39,7 +41,7 @@ module.exports = {
           collapsable: true,
           sidebarDepth: 2,
           children: [
-            ['javascript/blog1']
+            ['javascript/blog1', 'blog1']
           ]
         }
       ]
