@@ -19,13 +19,28 @@ module.exports = {
     sidebar: {
       '/articles/': [
         {
-          title: 'group1',
-          collapsable: false,
+          title: 'html',
+          collapsable: true,
           sidebarDepth: 2,
           children: [
             ['blog1', 'blog1'],
             ['blog2', 'blog2']
           ]
+        },
+        {
+          title: 'css',
+          collapsable: true,
+          sidebarDepth: 2,
+          children: [
+            ['blog1', 'blog1'],
+            ['blog2', 'blog2']
+          ]
+        },
+        {
+          title: 'javascript',
+          collapsable: true,
+          sidebarDepth: 2,
+          children: ['blog1']
         }
       ]
     },
