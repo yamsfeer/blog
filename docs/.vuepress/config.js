@@ -33,8 +33,7 @@ module.exports = {
           collapsable: true,
           sidebarDepth: 2,
           children: [
-            ['blog1', 'blog1'],
-            ['blog2', 'blog2']
+            ['blog1', 'blog1']
           ]
         }
       ],
@@ -44,8 +43,7 @@ module.exports = {
           collapsable: true,
           sidebarDepth: 2,
           children: [
-            ['blog1', 'blog1'],
-            ['blog2', 'blog2']
+            ['blog1', 'blog1']
           ]
         }
       ]
