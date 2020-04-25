@@ -11,7 +11,7 @@ module.exports = {
   markdown: {
     lineNumbers: true
   },
-  theme: '@vuepress/blog',
+  // theme: '@vuepress/blog',
   themeConfig: {
     searchMaxSuggestions: 10,
     displayAllHeaders:true,
