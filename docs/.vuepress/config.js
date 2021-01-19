@@ -11,38 +11,21 @@ module.exports = {
   markdown: {
     lineNumbers: true
   },
-  // theme: '@vuepress/blog',
+  // theme: 'vuepress-theme-blog',
   themeConfig: {
     searchMaxSuggestions: 10,
-    displayAllHeaders:true,
+    lastUpdated: '上次更新时间',
     nav: [
       { text: 'Github', link: 'https://github.com/melogra' }
     ],
     sidebar: {
       '/articles/': [
         {
-          title: 'html',
+          title: '你不知道的JS笔记',
           collapsable: true,
-          sidebarDepth: 2,
           children: [
-            // ['路由', '侧边栏标题']
-            ['html/blog1', '侧边栏标题']
-          ]
-        },
-        {
-          title: 'css',
-          collapsable: true,
-          sidebarDepth: 2,
-          children: [
-            ['css/blog1', 'blog1']
-          ]
-        },
-        {
-          title: 'javascript',
-          collapsable: true,
-          sidebarDepth: 2,
-          children: [
-            ['javascript/blog1', 'blog1']
+            ['javascript-note/1-1 作用域与编译器', '1-1 作用域与编译器'],
+            ['javascript-note/1.5作用域与闭包', '1.5作用域与闭包']
           ]
         }
       ]
