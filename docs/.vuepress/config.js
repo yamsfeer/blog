@@ -25,7 +25,7 @@ module.exports = {
   themeConfig: {
     displayAllHeaders: true,
     searchMaxSuggestions: 10,
-    lastUpdated: '上次更新时间',
+    blog: false,
     nav: [
       {
         text: 'YDKJS笔记',
