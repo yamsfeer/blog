@@ -13,19 +13,16 @@ module.exports = {
   },
   plugins: [
     'mermaidjs',
-    [
-      'md-enhance',
-      {
-        tex: true,
-        flowchart: true,
-      },
-    ],
   ],
   theme: 'vuepress-theme-hope',
   themeConfig: {
     displayAllHeaders: true,
     searchMaxSuggestions: 10,
+    // theme-hope
     blog: false,
+    mdEnhance: {
+      tex: true,
+    },
     nav: [
       {
         text: 'YDKJS笔记',
