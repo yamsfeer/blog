@@ -11,7 +11,17 @@ module.exports = {
   markdown: {
     lineNumbers: true
   },
-  plugins: ['@vuepress/back-to-top'],
+  plugins: [
+    'mermaidjs',
+    '@vuepress/back-to-top',
+    [
+      'md-enhance',
+      {
+        tex: true,
+        flowchart: true,
+      },
+    ],
+  ],
   // theme: 'vuepress-theme-blog',
   themeConfig: {
     displayAllHeaders: true,
