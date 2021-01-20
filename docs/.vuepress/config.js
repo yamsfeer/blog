@@ -13,7 +13,6 @@ module.exports = {
   },
   plugins: [
     'mermaidjs',
-    '@vuepress/back-to-top',
     [
       'md-enhance',
       {
@@ -22,7 +21,7 @@ module.exports = {
       },
     ],
   ],
-  // theme: 'vuepress-theme-blog',
+  theme: 'vuepress-theme-hope',
   themeConfig: {
     displayAllHeaders: true,
     searchMaxSuggestions: 10,
