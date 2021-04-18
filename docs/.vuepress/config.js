@@ -20,6 +20,7 @@ module.exports = config({
     displayAllHeaders: true,
     searchMaxSuggestions: 10,
     // theme-hope
+    hostname: 'https://melogra.github.io',
     mdEnhance: {
       tex: true,
       flowchart: true,
@@ -34,10 +35,22 @@ module.exports = config({
           { text: '下卷', link: '/YDKJS笔记（下卷）/1-1 深入编程' },
         ]
       },
+      { text: '书籍', link: '/书籍/ES6入门' },
       { text: '经典算法', link: '/algorithm/相关概念' },
+      { text: '杂谈', link: '/杂谈/网址收藏' },
       { text: 'Github', link: 'https://github.com/melogra' },
     ],
     sidebar: {
+      '/杂谈/': [
+        {
+          title: '杂谈',
+          collapsable: false,
+          children: [
+            ['网址收藏', '网址收藏'],
+            ['思维导图', '思维导图']
+          ]
+        }
+      ],
       '/YDKJS笔记（上卷）/': [
         {
           title: '你不知道的JS笔记（上卷）',
@@ -76,6 +89,8 @@ module.exports = config({
             ['2-5 程序性能', '2-5 程序性能'],
             ['2-6 性能测试与调优', '2-6 性能测试与调优'],
             ['附录1 混合环境JavaScript', '附录1 混合环境JavaScript'],
+            ['附录2 asynquence 库', '附录2 asynquence 库'],
+            ['附录3 高级异步模式', '附录3 高级异步模式'],
           ]
         }
       ],
@@ -84,7 +99,17 @@ module.exports = config({
           title: '你不知道的JS笔记（下卷）',
           collapsable: false,
           children: [
-            ['1-1 深入编程', '1-1 深入编程']
+            ['1-1 深入编程', '1-1 深入编程'],
+            ['1-2 深入JavaScript', '1-2 深入JavaScript'],
+            ['1-3 YKDJS系列总结', '1-3 YKDJS系列总结'],
+            ['2-1 ES现在与未来', '2-1 ES现在与未来'],
+            ['2-2 语法', '2-2 语法'],
+            ['2-3 代码组织', '2-3 代码组织'],
+            ['2-4 异步流控制', '2-4 异步流控制'],
+            ['2-5 集合', '2-5 集合'],
+            ['2-6 新增API', '2-6 新增API'],
+            ['2-7 元编程', '2-7 元编程'],
+            ['2-8 ES6+', '2-8 ES6+'],
           ]
         }
       ],
