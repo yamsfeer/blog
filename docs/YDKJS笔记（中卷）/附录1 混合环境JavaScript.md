@@ -1,4 +1,4 @@
-## 混合环境JavaScript
+# 混合环境JavaScript
 
 JavaScript 程序几乎总是在宿主环境中运行，这使得它在一定程度上变得不可预测。
 
@@ -6,7 +6,7 @@ JavaScript 程序几乎总是在宿主环境中运行，这使得它在一定程
 
 下面将介绍这些差异。
 
-### Annex B
+## Annex B
 
 JavaScript 语言的官方名称是 ECMAScript，JavaScript 是 ECMAScript 的通用称谓。
 
@@ -28,7 +28,7 @@ ECMAScript 规范包括 Annex B，其中介绍了由于浏览器兼容性问题�
 
   参数是结束位置索引(非自包含)，后者的第二个参数是长度(需要包含的字符数)。
 
-### Web ECMAScript
+## Web ECMAScript
 
 [Web ECMAScript 规范](https://javascript.spec.whatwg.org)中介绍了官方ECMAScript 规范和目前基于浏览器的 JavaScript 实现之间的差异。
 
@@ -46,7 +46,7 @@ ECMAScript 规范包括 Annex B，其中介绍了由于浏览器兼容性问题�
 
   `Function.prototype.arguments`(别名为 arguments 对象) 和 `Function.caller`(别名为 arguments.caller)。
 
-### 宿主对象
+## 宿主对象
 
 宿主对象(包括内建对象和函数)是由宿主环境，比如 *浏览器、Node.js*，创建并提供给 JavaScript 引擎的变量。
 
@@ -73,7 +73,7 @@ div.tagName; // "DIV"
 
 在针对运行环境进行编码时，宿主对象扮演着一个十分关键的角色，但要特别注意其行为特性，因为它们常常有别于普通的 JavaScript object。
 
-#### console 对象
+### console 对象
 
 console 对象由宿主环境提供，以便从代码中输出各种值。
 
@@ -81,7 +81,7 @@ console 对象由宿主环境提供，以便从代码中输出各种值。
 
 * 在 Node.js 中，则是指向 JavaScript 环境系统进程的 **标准输出(stdout)** 和 **标准错误输出(stderr)**。
 
-### 全局 DOM 变量
+## 全局 DOM 变量
 
 这是一个浏览器演进的历史遗留问题：在创建带有 id 属性的 DOM 元素时也会创建同名的全局变量。
 
@@ -96,7 +96,7 @@ if (typeof foo == "undefined") {
 console.log( foo ); // HTML元素
 ```
 
-###原生原型
+##原生原型
 
 **尽量不要拓展原生原型。**
 
@@ -115,7 +115,7 @@ if (!Array.prototype.push) {
 }
 ```
 
-### `<script>`
+## `<script>`
 
 web应用程序中加载Javascript代码的两种方式：
 
@@ -166,7 +166,7 @@ web应用程序中加载Javascript代码的两种方式：
 
   对于内联代码，则使用其所在页面文件的字符集 (或者默认字符集)。*内联代码的 script 标签没有 charset 属性*。
 
-### 保留字
+## 保留字
 
 ES5 规范在 7.6.1 节中定义了一些“保留字”，我们不能将它们用作变量名。
 
@@ -174,7 +174,7 @@ ES5 规范在 7.6.1 节中定义了一些“保留字”，我们不能将它们
 * 预留关键字：比如`enum`
 * `null、true、false`等
 
-### 实现中的限制
+## 实现中的限制
 
 JavaScript 规范对于函数中参数的个数，以及字符串常量的长度等并没有限制。但是由于JavaScript 引擎实现各异，规范在某些地方有一些限制。
 
@@ -204,7 +204,7 @@ sum.apply(null, nums); // 应该是: 499950000
 - JavaScript 程序以阻塞方式在浏览器中运行的最长时间(秒);
 - 变量名的最大长度。
 
-### 小结
+## 小结
 
 * `Annex B` 介绍了由于浏览器兼容性问题导致的与官方规范的差异。
 * `Web ECMAScript` 介绍了官方ECMAScript 规范和目前基于浏览器的 JavaScript 实现之间的差异。

@@ -1,20 +1,20 @@
-## Promise
+# Promise
 
-### promise两要素
+## promise两要素
 
-#### 承诺
+### 承诺
 
 书中用订汉堡的例子解释，当你在柜台向收银员下订单并付款后，会得到一张有订单号的收据。这个收据就是汉堡店给你的承诺，它承诺一段等待时间后会给你一个汉堡。等待期间你可以去干些别的事。
 
 *（这里指的就是pending状态的promise）*
 
-#### 承诺结果
+### 承诺结果
 
 针对上面汉堡的例子，最终要么得到一个汉堡，要没可能因为厨师下班之类的原因没能得到汉堡，但不变的是每个订单都有个最终的状态。
 
 *（这里指的是 promise 的 fulfill 或 reject）*
 
-### 判断是不是Promise
+## 判断是不是Promise
 
 在 Promise 领域，一个重要的细节是如何确定某个值是不是真正的 Promise。或者更直接地说，它是不是一个行为方式类似于 Promise 的值?
 
@@ -34,7 +34,7 @@
   }
   ```
 
-### Promise的信任
+## Promise的信任
 
 第二章介绍*回调*的时候，提到了回调函数的*控制反转*造成的信任问题。
 
@@ -104,7 +104,7 @@ Promise 的特性就是专门用来为这些问题提供一个有效的可复用
   )
   ```
 
-#### Promise.resolve
+### Promise.resolve
 
 如果向 Promise.resolve 传递一个非 Promise、非 thenable 的立即值，就会得到一个用这个值填充的 promise。
 
@@ -152,7 +152,7 @@ Promise.resolve( foo( 42 ) )
 
 ```
 
-### 术语：pending & resolve，fullfill & reject
+## 术语：pending & resolve，fullfill & reject
 
 这里将这4个术语分别翻译为：pending(等待)、resolve(完成)、fullfill(接受)、reject(拒绝)。
 
@@ -183,7 +183,7 @@ rejectedPr.then(
 
 **综上，promise有pending和resolved两种状态；其中resolved状态有fullfilled、rejected两种可能。**
 
-### 链式调用
+## 链式调用
 
 下面介绍Promise在链式调用中的数据传递、先后关系和错误处理。
 
@@ -217,7 +217,7 @@ request( "http://some.url.1/" )
   .then(response2 => console.log( response2 ));
 ```
 
-#### 链式调用的错误处理
+### 链式调用的错误处理
 
 **错误和异常是基于每个 Promise 的**，这意味着可能在链的任意位置捕捉到这样的错误。
 
@@ -276,7 +276,7 @@ p.then(
 
 * 如果处理函数返回一个 Promise，它将会被展开，不管它的决议值是什么，都会成为当前 then 返回的链接 Promise 的决议值。
 
-### 错误处理
+## 错误处理
 
 *调用reject函数*、*JavaScript异常* 都可以使promise被拒绝(reject)。
 
@@ -305,9 +305,9 @@ var p3 = p2.catch(handleErrs)
 
 书中没有给出这两个问题的标准处理方法。
 
-### promise异步模式
+## promise异步模式
 
-#### Promise.all([...])
+### Promise.all([...])
 
 ```javascript
 var p1 = request( "http://some.url.1/" );
@@ -325,7 +325,7 @@ Promise.all 需要一个参数，是一个数组，通常由Promise实例组成�
 
 永远要记住为每个promise关联一个拒绝/错误处理函数，特别是主promise。
 
-#### Promise.race([...])
+### Promise.race([...])
 
 与Promise.all类似，一旦有任何一个Promise决议为完成，Promise.race就会完成；
 
@@ -345,16 +345,16 @@ Promise.race([
 );
 ```
 
-#### 一些其他的API
+### 一些其他的API
 
 * Promise.any([...]) 任一promise完成
 * Promise.allSettled([...]) 所有的promise都settled（fullfilled或rejected）
 
 * 书中还提到一些其他变种，比如none、first、last、map等等，但是没有被纳入标准，因此这里不具体介绍
 
-### Promise 局限性
+## Promise 局限性
 
-#### 错误处理
+### 错误处理
 
 很多时候并没有为 Promise 链序列的中间步骤保留的引用，没有这样的引用，你就无法关联错误处理函数来可靠地检查错误。
 
@@ -368,17 +368,17 @@ var p = foo( 42 )
 // handleErrors如果出错无法捕获
 ```
 
-#### 只能fullfill或reject单个值
+### 只能fullfill或reject单个值
 
 根据定义，promise只能在fullfill或reject中传递一个值。虽然可以用数组或对象包装起来，但是在promise链中每一步进行包装和解包装就十分丑陋和笨重了。
 
-#### 只能resolve一次
+### 只能resolve一次
 
 Promise 最本质的一个特征是：**Promise 只能被决议一次(完成或拒绝)**。
 
 在许多异步情况中，你只会获取一个值一次，所以这可以工作良好。但是，还有很多异步的情况适合另一种模式——一种类似于事件或数据流的模式，比如为按钮添加点击事件和后续事件处理。
 
-#### 把回调重构成promise
+### 把回调重构成promise
 
 假设有一个基于回调写法的函数`ajax(url, callback)`。我们可以重新封装一个基于promise的函数来替换他，但是这样不够方便，因为这意味着每遇到一个类似函数都需要重构一遍。
 
@@ -405,7 +405,7 @@ request( "http://some.url.1/" )
   .then()
 ```
 
-#### 无法取消的promise
+### 无法取消的promise
 
 一旦创建了一个 Promise 并为其注册了完成、拒绝处理函数，如果出现某种情况使得这个任务悬而未决的话，你也没有办法从外部停止它的进程。
 
@@ -430,7 +430,7 @@ p.then( function(){
 
 **单独的 Promise 不应该可取消，但是可取消一个序列是合理的，**因为你不会像对待 Promise 那样把序列作为一个单独的不变值来传送。
 
-### 小结
+## 小结
 
 Promise 非常好，请使用。它们解决了我们因只用回调的代码而备受困扰的控制反转问题。
 

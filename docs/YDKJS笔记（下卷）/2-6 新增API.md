@@ -1,14 +1,14 @@
-## 新增API
+# 新增API
 
-### Array
+## Array
 
-### Object
+## Object
 
-### Math
+## Math
 
-### Number
+## Number
 
-### 字符串
+## 字符串
 
-### 小结
+## 小结
 

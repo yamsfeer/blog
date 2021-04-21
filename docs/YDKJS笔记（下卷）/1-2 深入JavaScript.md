@@ -1,4 +1,4 @@
-## 深入JavaScript
+# 深入JavaScript
 
 1. 值与类型
 2. 变量
