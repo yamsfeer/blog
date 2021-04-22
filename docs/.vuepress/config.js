@@ -35,7 +35,7 @@ module.exports = config({
           { text: '下卷', link: '/YDKJS笔记（下卷）/1-1 深入编程' },
         ]
       },
-      { text: '书籍', link: '/书籍/ES6入门' },
+      { text: '书籍', link: '/书籍/ES6入门.pdf' },
       { text: '经典算法', link: '/algorithm/相关概念' },
       { text: '杂谈', link: '/杂谈/网址收藏' },
       { text: 'Github', link: 'https://github.com/melogra' },

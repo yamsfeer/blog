@@ -76,7 +76,8 @@ JavaScript中只有类似类的一些语法功能，比如 new、instanceof，�
 function mixin( sourceObj, targetObj ) {
   for (var key in sourceObj) {
     if (!(key in targetObj)) {
-      targetObj[key] = sourceObj[key]; // 注意这里，对于对象类型数据来说，只是赋值（引用），没有真正复制
+      // 注意这里，对于对象类型数据来说，只是赋值（引用），没有真正复制
+      targetObj[key] = sourceObj[key];
     }
   }
   return targetObj;
