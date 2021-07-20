@@ -135,6 +135,12 @@ const sidebar = {
       children: getSidebar('计算机基础/计算机体系结构')
     },
     {
+      title: '计算机科学',
+      collapsable: false,
+      prefix: '计算机科学/',
+      children: getSidebar('计算机基础/计算机科学')
+    },
+    {
       title: '计算机网络',
       prefix: '计算机网络/',
       collapsable: false,
