@@ -13,12 +13,12 @@ const nav = [
   {
     text: '计算机基础',
     items: [
+      { text: '计算机科学', link: '/计算机基础/计算机科学/计算理论.md' },
+      { text: '计算机体系结构', link: '/计算机基础/计算机体系结构/冯诺依曼结构.md' },
+      { text: '汇编语言', link: '/计算机基础/汇编语言/x86.md' },
       { text: '操作系统', link: '/计算机基础/操作系统/进程.md' },
       { text: '编译原理', link: '/计算机基础/编译原理/词法分析.md' },
       { text: '计算机图形学', link: '/计算机基础/计算机图形学/渲染管道.md' },
-      { text: '汇编语言', link: '/计算机基础/汇编语言/x86.md' },
-      { text: '计算机体系结构', link: '/计算机基础/计算机体系结构/寄存器.md' },
-      { text: '计算机科学', link: '/计算机基础/计算机科学/图灵机.md' },
       { text: '计算机网络', link: '/计算机基础/计算机网络/' },
     ]
   },
@@ -106,6 +106,24 @@ const sidebar = {
   ],
   '/计算机基础/': [
     {
+      title: '计算机科学',
+      collapsable: false,
+      prefix: '计算机科学/',
+      children: getSidebar('计算机基础/计算机科学')
+    },
+    {
+      title: '计算机体系结构',
+      collapsable: false,
+      prefix: '计算机体系结构/',
+      children: getSidebar('计算机基础/计算机体系结构')
+    },
+    {
+      title: '汇编语言',
+      collapsable: false,
+      prefix: '汇编语言/',
+      children: getSidebar('计算机基础/汇编语言')
+    },
+    {
       title: '操作系统',
       collapsable: false,
       prefix: '操作系统/',
@@ -122,24 +140,6 @@ const sidebar = {
       collapsable: false,
       prefix: '计算机图形学/',
       children: getSidebar('计算机基础/计算机图形学')
-    },
-    {
-      title: '汇编语言',
-      collapsable: false,
-      prefix: '汇编语言/',
-      children: getSidebar('计算机基础/汇编语言')
-    },
-    {
-      title: '计算机体系结构',
-      collapsable: false,
-      prefix: '计算机体系结构/',
-      children: getSidebar('计算机基础/计算机体系结构')
-    },
-    {
-      title: '计算机科学',
-      collapsable: false,
-      prefix: '计算机科学/',
-      children: getSidebar('计算机基础/计算机科学')
     },
     {
       title: '计算机网络',
