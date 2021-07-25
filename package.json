@@ -20,12 +20,12 @@
   },
   "homepage": "https://github.com/melogra/blog#readme",
   "dependencies": {
-    "vuepress": "^1.2.0"
+    "vuepress": "^1.2.0",
+    "vuepress-plugin-mermaidjs": "^1.8.1",
+    "vuepress-theme-hope": "^1.19.0"
   },
   "devDependencies": {
-    "husky": "^3.1.0",
-    "vuepress-plugin-mermaidjs": "^1.8.1",
-    "vuepress-theme-hope": "^1.8.2"
+    "husky": "^3.1.0"
   },
   "husky": {
     "hooks": {
