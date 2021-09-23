@@ -22,7 +22,7 @@ const nav = [
       { text: '计算机网络', link: '/计算机基础/计算机网络/' },
     ]
   },
-  { text: '经典算法', link: '/algorithm/相关概念' },
+  { text: '算法', link: '/算法设计与分析/开始' },
   { text: '杂谈', link: '/杂谈/网址收藏' },
   { text: 'Github', link: 'https://github.com/melogra' },
 ];
@@ -62,41 +62,41 @@ const sidebar = {
       ]
     }
   ],
-  '/algorithm/': [
+  '/算法设计与分析/': [
     {
       title: '开始',
       collapsable: false,
-      children: [['相关概念', '相关概念']]
+      children: [['开始', '开始']]
     },
     {
       title: '分治',
       collapsable: false,
       prefix: '分治/',
-      children: getSidebar('algorithm/分治')
+      children: getSidebar('算法设计与分析/分治')
     },
     {
       title: '动态规划',
       collapsable: false,
       prefix: '动态规划/',
-      children: getSidebar('algorithm/动态规划')
+      children: getSidebar('算法设计与分析/动态规划')
     },
     {
       title: '贪心',
       collapsable: false,
       prefix: '贪心/',
-      children: getSidebar('algorithm/贪心')
+      children: getSidebar('算法设计与分析/贪心')
     },
     {
       title: '回溯',
       collapsable: false,
       prefix: '回溯/',
-      children: getSidebar('algorithm/回溯')
+      children: getSidebar('算法设计与分析/回溯')
     },
     {
       title: '分支限界',
       collapsable: false,
       prefix: '分支限界/',
-      children: getSidebar('algorithm/分支限界')
+      children: getSidebar('算法设计与分析/分支限界')
     },
     {
       title: '总结',
