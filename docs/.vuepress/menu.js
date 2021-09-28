@@ -23,6 +23,7 @@ const nav = [
     ]
   },
   { text: '算法', link: '/算法设计与分析/开始' },
+  { text: '浏览器', link: '/浏览器/webkit技术内幕/1. 浏览器和浏览器内核' },
   { text: '杂谈', link: '/杂谈/网址收藏' },
   { text: 'Github', link: 'https://github.com/melogra' },
 ];
@@ -147,6 +148,14 @@ const sidebar = {
       collapsable: false,
       children: getSidebar('计算机基础/计算机网络')
     },
+  ],
+  '/浏览器/': [
+    {
+      title: 'webkit技术内幕',
+      prefix: 'webkit技术内幕/',
+      collapsable: false,
+      children: getSidebar('浏览器/webkit技术内幕')
+    }
   ]
 };
 
