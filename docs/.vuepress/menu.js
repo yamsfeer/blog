@@ -24,6 +24,7 @@ const nav = [
   },
   { text: '算法', link: '/算法设计与分析/开始' },
   { text: '浏览器', link: '/浏览器/图解Google V8' },
+  { text: '源码', link: '/源码/vue/1. 准备工作' },
   { text: '杂谈', link: '/杂谈/网址收藏' },
   { text: 'Github', link: 'https://github.com/melogra' },
 ];
@@ -161,6 +162,14 @@ const sidebar = {
       prefix: '',
       collapsable: false,
       children: getSidebar('浏览器')
+    }
+  ],
+  '/源码/': [
+    {
+      title: 'vue',
+      prefix: 'vue/',
+      collapsable: false,
+      children: getSidebar('源码/vue')
     }
   ]
 };
