@@ -1,18 +1,29 @@
-const { getSidebar } = require('./utils')
+const { readdirSync } = require('fs')
+const path = require('path')
 
-const nav = [
+function getSidebar(dirname) {
+  let files = readdirSync(path.resolve(`${__dirname}/../${dirname}`))
+  return files.map(filename => {
+    return {
+      text: filename,
+      link: filename
+    }
+  })
+}
+
+const navbar = [
   {
     text: 'YDKJS笔记',
     ariaLabel: 'Language Menu',
-    items: [
-      { text: '上卷', link: '/YDKJS笔记（上卷）/1-1 作用域与编译器' },
-      { text: '中卷', link: '/YDKJS笔记（中卷）/1-1 类型' },
-      { text: '下卷', link: '/YDKJS笔记（下卷）/1-1 深入编程' },
+    children: [
+      { text: '上卷', link: '/YDKJS笔记（上卷）/1-1 作用域与编译器.md' },
+      { text: '中卷', link: '/YDKJS笔记（中卷）/1-1 类型.md' },
+      { text: '下卷', link: '/YDKJS笔记（下卷）/1-1 深入编程.md' },
     ]
   },
   {
     text: '计算机基础',
-    items: [
+    children: [
       { text: '计算机科学', link: '/计算机基础/计算机科学/计算理论.md' },
       { text: '计算机体系结构', link: '/计算机基础/计算机体系结构/冯诺依曼结构.md' },
       { text: '汇编语言', link: '/计算机基础/汇编语言/x86.md' },
@@ -22,159 +33,142 @@ const nav = [
       { text: '计算机网络', link: '/计算机基础/计算机网络/' },
     ]
   },
-  { text: '算法', link: '/算法设计与分析/开始' },
-  { text: '浏览器', link: '/浏览器/图解Google V8' },
-  { text: '源码', link: '/源码/vue/1. 准备工作' },
-  { text: '杂谈', link: '/杂谈/网址收藏' },
+  { text: '算法', link: '/算法设计与分析/开始.md' },
+  { text: '浏览器', link: '/浏览器/图解Google V8.md' },
+  { text: '源码', link: '/源码/vue/1. 准备工作.md' },
+  { text: 'css', link: '/css世界/1.块级元素与width、height.md' },
+  { text: '杂谈', link: '/杂谈/网址收藏.md' },
   { text: 'Github', link: 'https://github.com/melogra' },
 ];
 
 const sidebar = {
   '/杂谈/': [
     {
-      title: '杂谈',
-      collapsable: false,
+      text: '杂谈',
       children: getSidebar('杂谈')
     }
   ],
   '/YDKJS笔记（上卷）/': [
     {
-      title: '你不知道的JS笔记（上卷）',
-      collapsable: false,
-      children: [
-        ...getSidebar('YDKJS笔记（上卷）')
-      ]
+      text: '你不知道的JS笔记（上卷）',
+      children: getSidebar('YDKJS笔记（上卷）')
     }
   ],
   '/YDKJS笔记（中卷）/': [
     {
-      title: '你不知道的JS笔记（中卷）',
-      collapsable: false,
-      children: [
-        ...getSidebar('YDKJS笔记（中卷）')
-      ]
+      text: '你不知道的JS笔记（中卷）',
+      children: getSidebar('YDKJS笔记（中卷）')
     }
   ],
   '/YDKJS笔记（下卷）/': [
     {
-      title: '你不知道的JS笔记（下卷）',
-      collapsable: false,
-      children: [
-        ...getSidebar('YDKJS笔记（下卷）')
-      ]
+      text: '你不知道的JS笔记（下卷）',
+      children: getSidebar('YDKJS笔记（下卷）')
     }
   ],
   '/算法设计与分析/': [
     {
-      title: '开始',
-      collapsable: false,
-      children: [['开始', '开始']]
+      text: '开始',
+      children: [{ text: '开始', link: '/算法设计与分析/开始.md' }]
     },
     {
-      title: '分治',
-      collapsable: false,
+      text: '分治',
       prefix: '分治/',
       children: getSidebar('算法设计与分析/分治')
     },
     {
-      title: '动态规划',
-      collapsable: false,
+      text: '动态规划',
       prefix: '动态规划/',
       children: getSidebar('算法设计与分析/动态规划')
     },
     {
-      title: '贪心',
-      collapsable: false,
+      text: '贪心',
       prefix: '贪心/',
       children: getSidebar('算法设计与分析/贪心')
     },
     {
-      title: '回溯',
-      collapsable: false,
+      text: '回溯',
       prefix: '回溯/',
       children: getSidebar('算法设计与分析/回溯')
     },
     {
-      title: '分支限界',
-      collapsable: false,
+      text: '分支限界',
       prefix: '分支限界/',
       children: getSidebar('算法设计与分析/分支限界')
     },
     {
-      title: '总结',
-      collapsable: false,
-      children: [['总结', '总结']]
+      text: '总结',
+      children: [{ text: '总结', link: '/算法设计与分析/总结.md' }]
     },
   ],
-  '/计算机基础/': [
+
+  '/计算机基础/计算机科学': [
     {
-      title: '计算机科学',
-      collapsable: false,
-      prefix: '计算机科学/',
+      text: '计算机科学',
       children: getSidebar('计算机基础/计算机科学')
     },
+  ],
+  '/计算机基础/计算机体系结构': [
     {
-      title: '计算机体系结构',
-      collapsable: false,
-      prefix: '计算机体系结构/',
+      text: '计算机体系结构',
       children: getSidebar('计算机基础/计算机体系结构')
     },
+  ],
+  '/计算机基础/汇编语言': [
     {
-      title: '汇编语言',
-      collapsable: false,
-      prefix: '汇编语言/',
+      text: '汇编语言',
       children: getSidebar('计算机基础/汇编语言')
     },
+  ],
+  '/计算机基础/操作系统': [
     {
-      title: '操作系统',
-      collapsable: false,
-      prefix: '操作系统/',
+      text: '操作系统',
       children: getSidebar('计算机基础/操作系统')
     },
+  ],
+  '/计算机基础/编译原理': [
     {
-      title: '编译原理',
-      collapsable: false,
-      prefix: '编译原理/',
+      text: '编译原理',
       children: getSidebar('计算机基础/编译原理')
     },
+  ],
+  '/计算机基础/计算机图形学': [
     {
-      title: '计算机图形学',
-      collapsable: false,
-      prefix: '计算机图形学/',
+      text: '计算机图形学',
       children: getSidebar('计算机基础/计算机图形学')
     },
+  ],
+  '/计算机基础/计算机网络': [
     {
-      title: '计算机网络',
-      prefix: '计算机网络/',
-      collapsable: false,
+      text: '计算机网络',
       children: getSidebar('计算机基础/计算机网络')
     },
   ],
   '/浏览器/': [
     {
-      title: 'webkit技术内幕',
-      prefix: 'webkit技术内幕/',
-      collapsable: false,
+      text: 'webkit技术内幕',
       children: getSidebar('浏览器/webkit技术内幕')
     },
     {
-      title: '其他',
-      prefix: '',
-      collapsable: false,
+      text: '其他',
       children: getSidebar('浏览器')
     }
   ],
   '/源码/': [
     {
-      title: 'vue',
-      prefix: 'vue/',
-      collapsable: false,
+      text: 'vue',
       children: getSidebar('源码/vue')
+    }
+  ],
+  '/css世界/': [
+    {
+      text: 'css',
+      children: getSidebar('css世界')
     }
   ]
 };
 
 module.exports = {
-  nav,
+  navbar,
   sidebar
 };
