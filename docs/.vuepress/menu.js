@@ -26,7 +26,7 @@ const navbar = [
     children: [
       { text: '计算机科学', link: '/计算机基础/计算机科学/计算理论.md' },
       { text: '计算机体系结构', link: '/计算机基础/计算机体系结构/冯诺依曼结构.md' },
-      { text: '汇编语言', link: '/计算机基础/汇编语言/x86.md' },
+      { text: '汇编语言', link: '/计算机基础/汇编语言/MIPS汇编入门.md' },
       { text: '操作系统', link: '/计算机基础/操作系统/进程.md' },
       { text: '编译原理', link: '/计算机基础/编译原理/1. 编译器介绍.md' },
       { text: '计算机图形学', link: '/计算机基础/计算机图形学/渲染管道.md' },
@@ -144,9 +144,10 @@ const sidebar = {
       children: getSidebar('计算机基础/计算机网络')
     },
   ],
-  '/浏览器/': [
+  '/浏览器': [
     {
       text: 'webkit技术内幕',
+      prefix: 'webkit技术内幕',
       children: getSidebar('浏览器/webkit技术内幕')
     },
     {
@@ -154,7 +155,7 @@ const sidebar = {
       children: getSidebar('浏览器')
     }
   ],
-  '/源码/': [
+  '/源码/vue': [
     {
       text: 'vue',
       children: getSidebar('源码/vue')
