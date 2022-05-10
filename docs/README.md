@@ -1,5 +1,5 @@
 ---
 home: true
-heroText: yams blog
+heroText: yamsfeer's blog
 tagline: null
 ---

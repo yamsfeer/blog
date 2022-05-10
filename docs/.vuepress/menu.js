@@ -5,22 +5,13 @@ function getSidebar(dirname) {
   let files = readdirSync(path.resolve(`${__dirname}/../${dirname}`))
   return files.map(filename => {
     return {
-      text: filename,
+      text: filename.split('.md')[0],
       link: filename
     }
   })
 }
 
 const navbar = [
-  {
-    text: 'YDKJS笔记',
-    ariaLabel: 'Language Menu',
-    children: [
-      { text: '上卷', link: '/YDKJS笔记（上卷）/1-1 作用域与编译器.md' },
-      { text: '中卷', link: '/YDKJS笔记（中卷）/1-1 类型.md' },
-      { text: '下卷', link: '/YDKJS笔记（下卷）/1-1 深入编程.md' },
-    ]
-  },
   {
     text: '计算机基础',
     children: [
@@ -34,36 +25,44 @@ const navbar = [
     ]
   },
   { text: '算法', link: '/算法设计与分析/开始.md' },
-  { text: '浏览器', link: '/浏览器/图解Google V8.md' },
   { text: '源码', link: '/源码/vue/1. 准备工作.md' },
+  { text: '浏览器', link: '/浏览器/图解Google V8.md' },
+  {
+    text: 'js',
+    children: [
+      { text: '上卷', link: '/YDKJS(上卷)/1-1 作用域与编译器.md' },
+      { text: '中卷', link: '/YDKJS(中卷)/1-1 类型.md' },
+      { text: '下卷', link: '/YDKJS(下卷)/1-1 深入编程.md' },
+    ]
+  },
   { text: 'css', link: '/css世界/1.块级元素与width、height.md' },
-  { text: '杂谈', link: '/杂谈/网址收藏.md' },
-  { text: 'Github', link: 'https://github.com/melogra' },
+  { text: '其他', link: '/其他/网址收藏.md' },
+  { text: 'Github', link: 'https://github.com/yamsfeer' },
 ];
 
 const sidebar = {
-  '/杂谈/': [
+  '/其他/': [
     {
-      text: '杂谈',
-      children: getSidebar('杂谈')
+      text: '其他',
+      children: getSidebar('其他')
     }
   ],
-  '/YDKJS笔记（上卷）/': [
+  '/YDKJS(上卷)/': [
     {
-      text: '你不知道的JS笔记（上卷）',
-      children: getSidebar('YDKJS笔记（上卷）')
+      text: '你不知道的JS(上卷)',
+      children: getSidebar('YDKJS(上卷)')
     }
   ],
-  '/YDKJS笔记（中卷）/': [
+  '/YDKJS(中卷)/': [
     {
-      text: '你不知道的JS笔记（中卷）',
-      children: getSidebar('YDKJS笔记（中卷）')
+      text: '你不知道的JS(中卷)',
+      children: getSidebar('YDKJS(中卷)')
     }
   ],
-  '/YDKJS笔记（下卷）/': [
+  '/YDKJS(下卷)/': [
     {
-      text: '你不知道的JS笔记（下卷）',
-      children: getSidebar('YDKJS笔记（下卷）')
+      text: '你不知道的JS(下卷)',
+      children: getSidebar('YDKJS(下卷)')
     }
   ],
   '/算法设计与分析/': [
