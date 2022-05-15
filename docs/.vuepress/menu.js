@@ -36,15 +36,15 @@ const navbar = [
     ]
   },
   { text: 'css', link: '/css世界/1.块级元素与width、height.md' },
-  { text: '其他', link: '/其他/网址收藏.md' },
+  { text: 'clutter', link: '/clutter/网址收藏.md' },
   { text: 'Github', link: 'https://github.com/yamsfeer' },
 ];
 
 const sidebar = {
-  '/其他/': [
+  '/clutter/': [
     {
-      text: '其他',
-      children: getSidebar('其他')
+      text: 'clutter',
+      children: getSidebar('clutter')
     }
   ],
   '/YDKJS(上卷)/': [
@@ -150,7 +150,7 @@ const sidebar = {
       children: getSidebar('浏览器/webkit技术内幕')
     },
     {
-      text: '其他',
+      text: 'clutter',
       children: getSidebar('浏览器')
     }
   ],
