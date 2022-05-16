@@ -20,24 +20,28 @@ const navbar = [
       { text: '汇编语言', link: '/计算机基础/汇编语言/MIPS汇编入门.md' },
       { text: '操作系统', link: '/计算机基础/操作系统/进程.md' },
       { text: '编译原理', link: '/计算机基础/编译原理/1. 编译器介绍.md' },
-      { text: '计算机图形学', link: '/计算机基础/计算机图形学/渲染管道.md' },
       { text: '计算机网络', link: '/计算机基础/计算机网络/' },
     ]
   },
   { text: '算法', link: '/算法设计与分析/开始.md' },
   { text: '源码', link: '/源码/vue/1. 准备工作.md' },
-  { text: '浏览器', link: '/浏览器/图解Google V8.md' },
+  { text: '图形学', link: '/图形学/渲染管道.md' },
   {
-    text: 'js',
+    text: '前端',
     children: [
-      { text: '上卷', link: '/YDKJS(上卷)/1-1 作用域与编译器.md' },
-      { text: '中卷', link: '/YDKJS(中卷)/1-1 类型.md' },
-      { text: '下卷', link: '/YDKJS(下卷)/1-1 深入编程.md' },
+      { text: '浏览器', link: '/浏览器/图解Google V8.md' },
+      {
+        text: 'javascript',
+        children: [
+          { text: '上卷', link: '/YDKJS(上卷)/1-1 作用域与编译器.md' },
+          { text: '中卷', link: '/YDKJS(中卷)/1-1 类型.md' },
+          { text: '下卷', link: '/YDKJS(下卷)/1-1 深入编程.md' },
+        ]
+      },
+      { text: 'css', link: '/css世界/1.块级元素与width、height.md' },
     ]
   },
-  { text: 'css', link: '/css世界/1.块级元素与width、height.md' },
   { text: 'clutter', link: '/clutter/网址收藏.md' },
-  { text: 'Github', link: 'https://github.com/yamsfeer' },
 ];
 
 const sidebar = {
@@ -131,17 +135,17 @@ const sidebar = {
       children: getSidebar('计算机基础/编译原理')
     },
   ],
-  '/计算机基础/计算机图形学': [
-    {
-      text: '计算机图形学',
-      children: getSidebar('计算机基础/计算机图形学')
-    },
-  ],
   '/计算机基础/计算机网络': [
     {
       text: '计算机网络',
       children: getSidebar('计算机基础/计算机网络')
     },
+  ],
+  '/图形学/': [
+    {
+      text: '图形学',
+      children: getSidebar('图形学')
+    }
   ],
   '/浏览器': [
     {

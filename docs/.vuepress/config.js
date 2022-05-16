@@ -10,13 +10,23 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/logo.ico' }]
   ],
+  shouldPrefetch: false, // pwa
   theme: hopeTheme({
     navbar,
     sidebar,
 
     hostname: 'https://yamsfeer.github.io',
+    repo: "https://github.com/yamsfeer",
+    repoLabel: "GitHub",
+    repoDisplay: true,
+
+    /* 页面主题配置 */
+    pageInfo: false,
+    editLink: false,
+    prevLink: false,
+    nextLink: false,
+
     plugins: {
-      blog: true,
       mdEnhance: {
         tex: true,
         flowchart: true,
