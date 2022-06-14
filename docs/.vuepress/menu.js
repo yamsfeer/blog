@@ -23,9 +23,10 @@ const navbar = [
       { text: '计算机网络', link: '/计算机基础/计算机网络/' },
     ]
   },
+  { text: '数学', link: '/数学/线性代数的本质/0.序言.md' },
   { text: '算法', link: '/算法设计与分析/开始.md' },
   { text: '源码', link: '/源码/vue/1. 准备工作.md' },
-  { text: '图形学', link: '/图形学/渲染管道.md' },
+  { text: '图形学', link: '/图形学/现代计算机图形学入门/前言.md' },
   {
     text: '前端',
     children: [
@@ -41,6 +42,7 @@ const navbar = [
       { text: 'css', link: '/css世界/1.块级元素与width、height.md' },
     ]
   },
+  { text: '工程化', link: '/工程化/工具链.md' },
   { text: 'clutter', link: '/clutter/网址收藏.md' },
 ];
 
@@ -141,10 +143,23 @@ const sidebar = {
       children: getSidebar('计算机基础/计算机网络')
     },
   ],
+  '/数学/': [
+    {
+      text: '线性代数的本质',
+      prefix: '线性代数的本质',
+      children: getSidebar('数学/线性代数的本质')
+    }
+  ],
   '/图形学/': [
     {
-      text: '图形学',
-      children: getSidebar('图形学')
+      text: '现代计算机图形学入门',
+      prefix: '现代计算机图形学入门',
+      children: getSidebar('图形学/现代计算机图形学入门')
+    },
+    {
+      text: '图形学API入门',
+      prefix: '图形学API入门',
+      children: getSidebar('图形学/图形学API入门')
     }
   ],
   '/浏览器': [
@@ -154,7 +169,7 @@ const sidebar = {
       children: getSidebar('浏览器/webkit技术内幕')
     },
     {
-      text: 'clutter',
+      text: '浏览器',
       children: getSidebar('浏览器')
     }
   ],

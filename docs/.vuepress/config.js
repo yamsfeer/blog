@@ -25,11 +25,13 @@ module.exports = {
     editLink: false,
     prevLink: false,
     nextLink: false,
+    title: false,
 
     plugins: {
       mdEnhance: {
         tex: true,
         flowchart: true,
+        mermaid: true,
         demo: true,
       },
     },
