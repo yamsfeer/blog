@@ -37,6 +37,7 @@ const navbar = [
     children: [
       { text: '算法设计与分析', link: '/算法设计与分析/开始.md' },
       { text: '经典算法', link: '/经典算法/KMP.md' },
+      { text: 'leetcode', link: '/leetcode/0.开始.md' },
     ]
   },
   { text: '源码', link: '/源码/vue/1. 准备工作.md' },
@@ -50,7 +51,6 @@ const navbar = [
   {
     text: '前端',
     children: [
-      { text: '浏览器', link: '/浏览器/图解Google V8.md' },
       {
         text: 'javascript',
         children: [
@@ -59,6 +59,7 @@ const navbar = [
           { text: '下卷', link: '/YDKJS(下卷)/1-1 深入编程.md' },
         ]
       },
+      { text: '浏览器', link: '/浏览器/图解Google V8.md' },
       { text: 'css', link: '/css世界/1.块级元素与width、height.md' },
       { text: '工程化', link: '/工程化/工具链.md' },
     ]
@@ -83,6 +84,7 @@ const sidebar = {
     { text: '总结', children: [{ text: '总结', link: '/算法设计与分析/总结.md' }] },
   ],
   '/经典算法/': [{ text: '经典算法', children: dir('经典算法') }],
+  '/leetcode/': [{ text: 'leetcode', children: dir('leetcode') }],
 
   '/计算机基础/计算机科学': [{ text: '计算机科学', children: dir('计算机基础/计算机科学') }],
   '/计算机基础/计算机体系结构': [{ text: '计算机体系结构', children: dir('计算机基础/计算机体系结构') }],

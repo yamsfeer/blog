@@ -26,6 +26,7 @@ module.exports = {
     prevLink: false,
     nextLink: false,
     title: false,
+    navbarAutoHide: 'always',
 
     plugins: {
       mdEnhance: {
