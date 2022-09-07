@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/yamsfeer/blog#readme",
   "devDependencies": {
-    "husky": "^8.0.1",
+    "husky": "3.0.1",
     "vuepress": "^2.0.0-beta.51",
     "vuepress-theme-hope": "^2.0.0-beta.97"
   },
