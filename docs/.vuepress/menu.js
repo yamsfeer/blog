@@ -1,5 +1,5 @@
-const { readdirSync } = require('fs')
-const path = require('path')
+import path from 'path'
+import { readdirSync } from 'fs'
 
 function dir(dirname) {
   let files = readdirSync(path.resolve(`${__dirname}/../${dirname}`))
@@ -11,7 +11,7 @@ function dir(dirname) {
   })
 }
 
-const navbar = [
+export const navbar = [
   {
     text: '计算机基础',
     children: [
@@ -67,7 +67,7 @@ const navbar = [
   { text: 'clutter', link: '/clutter/网址收藏.md' },
 ];
 
-const sidebar = {
+export const sidebar = {
   '/clutter/': [{ text: 'clutter', children: dir('clutter') }],
 
   '/YDKJS(上卷)/': [{ text: '你不知道的JS(上卷)', children: dir('YDKJS(上卷)') }],
@@ -114,9 +114,4 @@ const sidebar = {
   ],
   '/源码/vue': [{ text: 'vue', children: dir('源码/vue') }],
   '/css世界/': [{ text: 'css', children: dir('css世界') }]
-};
-
-module.exports = {
-  navbar,
-  sidebar
 };
