@@ -1,5 +1,6 @@
 import { defineUserConfig } from 'vuepress'
 import { hopeTheme } from "vuepress-theme-hope"
+import { searchPlugin } from '@vuepress/plugin-search'
 
 import { navbar, sidebar } from './menu';
 
@@ -13,6 +14,9 @@ const config = {
     ['link', { rel: 'icon', href: '/logo.ico' }]
   ],
   shouldPrefetch: false, // pwa
+
+  plugins: [searchPlugin()],
+
   theme: hopeTheme({
     navbar,
     sidebar,
@@ -28,7 +32,7 @@ const config = {
     prevLink: false,
     nextLink: false,
     title: false,
-    navbarAutoHide: 'always',
+    // navbarAutoHide: 'always',
 
     plugins: {
       mdEnhance: {

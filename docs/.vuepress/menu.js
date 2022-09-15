@@ -1,14 +1,15 @@
 import path from 'path'
-import { readdirSync } from 'fs'
+import { readdirSync, stat } from 'fs'
 
 function dir(dirname) {
-  let files = readdirSync(path.resolve(`${__dirname}/../${dirname}`))
-  return files.map(filename => {
-    return {
-      text: filename.split('.md')[0],
-      link: filename
-    }
-  })
+  return readdirSync(path.resolve(`${__dirname}/../${dirname}`))
+    .filter(filename => filename.includes('.md'))
+    .map(filename => {
+      return {
+        text: filename.split('.md')[0],
+        link: filename
+      }
+    })
 }
 
 export const navbar = [
@@ -20,24 +21,16 @@ export const navbar = [
       { text: '汇编语言', link: '/计算机基础/汇编语言/MIPS汇编入门.md' },
       { text: '操作系统', link: '/计算机基础/操作系统/1.0计算机启动.md' },
       { text: '编译原理', link: '/计算机基础/编译原理/1. 编译器介绍.md' },
-      { text: '计算机网络', link: '/计算机基础/计算机网络/' },
+      // { text: '计算机网络', link: '/计算机基础/计算机网络/' },
     ]
   },
   {
-    text: '数学',
+    text: '编程',
     children: [
-      { text: '线性代数', link: '/数学/线性代数的本质/0.序言.md' },
-      { text: '几何', link: '/数学/几何/欧几里得几何与非欧几何.md' },
-      { text: '微积分', link: '/数学/微积分/微积分基本概念.md' },
-      { text: '傅里叶变换', link: '/数学/傅里叶变换/傅里叶变换.md' },
-    ]
-  },
-  {
-    text: '算法',
-    children: [
+      { text: 'leetcode', link: '/leetcode/0.开始.md' },
+      { text: '手写代码', link: '/手写代码/防抖节流.md' },
       { text: '算法设计与分析', link: '/算法设计与分析/开始.md' },
       { text: '经典算法', link: '/经典算法/KMP.md' },
-      { text: 'leetcode', link: '/leetcode/0.开始.md' },
     ]
   },
   { text: '源码', link: '/源码/vue/1. 准备工作.md' },
@@ -46,6 +39,15 @@ export const navbar = [
     children: [
       { text: 'games101', link: '/图形学/现代计算机图形学入门/0.序言.md' },
       { text: '图形学API', link: '/图形学/图形学API/webGL.md' },
+    ]
+  },
+  {
+    text: '数学',
+    children: [
+      { text: '线性代数', link: '/数学/线性代数的本质/0.序言.md' },
+      { text: '几何', link: '/数学/几何/欧几里得几何与非欧几何.md' },
+      { text: '微积分', link: '/数学/微积分/微积分基本概念.md' },
+      // { text: '傅里叶变换', link: '/数学/傅里叶变换/傅里叶变换.md' },
     ]
   },
   {
@@ -59,12 +61,12 @@ export const navbar = [
           { text: '下卷', link: '/YDKJS(下卷)/1-1 深入编程.md' },
         ]
       },
-      { text: '浏览器', link: '/浏览器/图解Google V8.md' },
+      { text: '浏览器', link: '/浏览器/图解V8/1.图解V8.md' },
       { text: 'css', link: '/css世界/1.块级元素与width、height.md' },
-      { text: '工程化', link: '/工程化/工具链.md' },
     ]
   },
-  { text: 'clutter', link: '/clutter/网址收藏.md' },
+  { text: '工程', link: '/工程化/工具链.md' },
+  { text: 'clutter', link: '/clutter/思维导图.md' },
 ];
 
 export const sidebar = {
@@ -85,6 +87,7 @@ export const sidebar = {
   ],
   '/经典算法/': [{ text: '经典算法', children: dir('经典算法') }],
   '/leetcode/': [{ text: 'leetcode', children: dir('leetcode') }],
+  '/手写代码/': [{ text: '手写代码', children: dir('手写代码') }],
 
   '/计算机基础/计算机科学': [{ text: '计算机科学', children: dir('计算机基础/计算机科学') }],
   '/计算机基础/计算机体系结构': [{ text: '计算机体系结构', children: dir('计算机基础/计算机体系结构') }],
@@ -108,10 +111,16 @@ export const sidebar = {
       children: dir('浏览器/webkit技术内幕')
     },
     {
+      text: '图解V8',
+      prefix: '图解V8',
+      children: dir('浏览器/图解V8')
+    },
+    {
       text: '浏览器',
       children: dir('浏览器')
     }
   ],
+  '/工程化/': [{ text: '工程化', children: dir('工程化') }],
   '/源码/vue': [{ text: 'vue', children: dir('源码/vue') }],
   '/css世界/': [{ text: 'css', children: dir('css世界') }]
 };
