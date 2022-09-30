@@ -36,7 +36,9 @@ const config = {
 
     plugins: {
       mdEnhance: {
-        tex: true,
+        katex: true,
+        // tex: true,
+        // mathjax: true,
         flowchart: true,
         mermaid: true,
         demo: true,

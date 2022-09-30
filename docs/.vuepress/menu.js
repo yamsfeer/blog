@@ -31,9 +31,15 @@ export const navbar = [
       { text: '手写代码', link: '/手写代码/防抖节流.md' },
       { text: '算法设计与分析', link: '/算法设计与分析/开始.md' },
       { text: '经典算法', link: '/经典算法/KMP.md' },
+      { text: '设计模式', link: '/设计模式/观察者模式VS发布订阅.md' },
     ]
   },
-  { text: '源码', link: '/源码/vue/1. 准备工作.md' },
+  {
+    text: '源码',
+    children: [
+      { text: 'vue', link: '/源码/vue/1. 准备工作.md' },
+    ]
+  },
   {
     text: '图形学',
     children: [
@@ -46,7 +52,7 @@ export const navbar = [
     children: [
       { text: '线性代数', link: '/数学/线性代数的本质/0.序言.md' },
       { text: '几何', link: '/数学/几何/欧几里得几何与非欧几何.md' },
-      { text: '微积分', link: '/数学/微积分/微积分基本概念.md' },
+      // { text: '微积分', link: '/数学/微积分/微积分基本概念.md' },
       // { text: '傅里叶变换', link: '/数学/傅里叶变换/傅里叶变换.md' },
     ]
   },
@@ -88,6 +94,7 @@ export const sidebar = {
   '/经典算法/': [{ text: '经典算法', children: dir('经典算法') }],
   '/leetcode/': [{ text: 'leetcode', children: dir('leetcode') }],
   '/手写代码/': [{ text: '手写代码', children: dir('手写代码') }],
+  '/设计模式/': [{ text: '设计模式', children: dir('设计模式') }],
 
   '/计算机基础/计算机科学': [{ text: '计算机科学', children: dir('计算机基础/计算机科学') }],
   '/计算机基础/计算机体系结构': [{ text: '计算机体系结构', children: dir('计算机基础/计算机体系结构') }],

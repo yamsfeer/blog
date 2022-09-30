@@ -1,4 +1,6 @@
+# utf-8 编码解码
 
+[字符编码](../计算机基础/计算机体系结构/字符编码.md#utf-8)
 
 ```javascript
 // 判断需要多少个字节存储
@@ -20,7 +22,8 @@ function padEncodeStr(binCode, n) {
   let binPtr = binCode.length
   let i = n
   while (i-- > 1) { // 首字节另外填充
-    encodeStr = `10${binCode.substring(binPtr - 6, binPtr)}${encodeStr}` //截取六位填充一个字节
+    //截取六位填充一个字节
+    encodeStr = `10${binCode.substring(binPtr - 6, binPtr)}${encodeStr}`
     binPtr -= 6
   }
   // 当只有一个字节时，以0开头
@@ -35,7 +38,11 @@ function encode(char) {
   let bytes = getCodeBytes(code) // 需要bytes个字节存储
   return padEncodeStr(binCode, bytes)
 }
+```
 
+
+
+```javascript
 function sliceCode(binCode, n) {
   let segs = []
   let p = 0
@@ -59,14 +66,21 @@ function decode(binCode) {
 
   return String.fromCharCode(`0b${unicode}`)
 }
-
-console.log(encode('文') === '111001101001011010000111')
-console.log(encode('a') === '01100001')
-
-console.log(decode('111001101001011010000111') === '文')
-console.log(decode('01100001') === 'a')
-
-console.log(decode(encode('文')) === '文')
-console.log(decode(encode('0')) === '0')
 ```
 
+
+
+
+
+
+
+```javascript
+encode('文') === '111001101001011010000111')
+encode('a') === '01100001'
+
+decode('111001101001011010000111') === '文'
+decode('01100001') === 'a'
+
+decode(encode('文')) === '文'
+decode(encode('0')) === '0'
+```

@@ -6,11 +6,11 @@
 
 ![](https://tva1.sinaimg.cn/large/008i3skNgy1gty3jsr771j61m40i2aeg02.jpg)
 
-[编译原理的相关内容](https://yamsfeer.github.io/blog/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/1.%20%E7%BC%96%E8%AF%91%E5%99%A8%E4%BB%8B%E7%BB%8D)
+[编译原理的相关内容](../计算机基础/编译原理/1.%20编译器介绍.md)
 
 ## 词法分析
 
-词法分析就是将字符流转换成token的过程。转换过程需要使用[状态机](https://yamsfeer.github.io/blog/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA)。
+词法分析就是将字符流转换成token的过程。转换过程需要使用[状态机](../计算机基础/计算机科学/有限状态机.md)。
 
 ### 操作符状态机
 
@@ -31,11 +31,13 @@
 ### 推导关系
 
 程序由语句构成，有如下推导关系：
+
 $$
 Program \to Stmts \to Stmt \ Stmts \ | \ \epsilon \\
 Stmt \to ForStmt \ | \ DeclStmt \ | \ AssignStmt \ | \ Function \ \dots \ | \ Block \\
 Block \to \{ Stmts \}
 $$
+
 解析过程中的调用关系：
 
 <img class="img-mid" src="https://tva1.sinaimg.cn/large/008i3skNgy1gx3fqpvm4wj30gs06ymxf.jpg"  />
