@@ -38,6 +38,7 @@ export const navbar = [
     text: '源码',
     children: [
       { text: 'vue', link: '/源码/vue/1. 准备工作.md' },
+      { text: 'vue3', link: '/源码/vue3/0. 开始.md' },
     ]
   },
   {
@@ -129,5 +130,6 @@ export const sidebar = {
   ],
   '/工程化/': [{ text: '工程化', children: dir('工程化') }],
   '/源码/vue': [{ text: 'vue', children: dir('源码/vue') }],
+  '/源码/vue3': [{ text: 'vue3', children: dir('源码/vue3') }],
   '/css世界/': [{ text: 'css', children: dir('css世界') }]
 };
