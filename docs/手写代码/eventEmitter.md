@@ -1,6 +1,6 @@
 # EventEmitter
 
-eventEmitter 是发布订阅模式的一种实现，具体看 [观察者模式 VS 发布订阅](../设计模式/观察者模式VS发布订阅.md)
+eventEmitter 是发布订阅模式的一种实现。
 
 ```javascript
 class EventEmitter {

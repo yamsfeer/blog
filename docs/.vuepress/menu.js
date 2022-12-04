@@ -30,6 +30,7 @@ export const navbar = [
       { text: 'leetcode', link: '/leetcode/0.开始.md' },
       { text: '手写代码', link: '/手写代码/防抖节流.md' },
       { text: '数据结构', link: '/数据结构/堆.md' },
+      { text: '经典算法', link: '/经典算法/排序算法.md' },
       { text: '算法设计与分析', link: '/算法设计与分析/开始.md' },
       { text: '设计模式', link: '/设计模式/观察者模式VS发布订阅.md' },
     ]
@@ -56,7 +57,7 @@ export const navbar = [
     text: '前端',
     children: [
       { text: '你不知道的JS', link: '/YDKJS/YDKJS(上卷)/1-1 作用域与编译器.md' },
-      { text: 'JS标准解读', link: '/JS标准解读/执行上下文.md' },
+      { text: 'JS基础', link: '/JS基础/执行上下文.md' },
       { text: 'css世界', link: '/css世界/1.块级元素与width、height.md' },
       { text: '浏览器', link: '/浏览器/图解V8/1.图解V8.md' },
     ]
@@ -93,6 +94,7 @@ export const sidebar = {
     { text: '总结', children: [{ text: '总结', link: '/算法设计与分析/总结.md' }] },
   ],
   '/数据结构/': [{ text: '数据结构', children: dir('数据结构') }],
+  '/经典算法/': [{ text: '经典算法', children: dir('经典算法') }],
   '/leetcode/': [{ text: 'leetcode', children: dir('leetcode') }],
   '/手写代码/': [{ text: '手写代码', children: dir('手写代码') }],
   '/设计模式/': [{ text: '设计模式', children: dir('设计模式') }],
@@ -128,5 +130,5 @@ export const sidebar = {
   '/源码/vue3': [{ text: 'vue3', children: dir('源码/vue3') }],
   '/css世界/': [{ text: 'css', children: dir('css世界') }],
 
-  '/JS标准解读/': [{ text: 'JS标准解读', children: dir('JS标准解读') }],
+  '/JS基础/': [{ text: 'JS基础', children: dir('JS基础') }],
 };

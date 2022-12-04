@@ -1,7 +1,5 @@
 # utf-8 编码解码
 
-[字符编码](../计算机基础/计算机体系结构/字符编码.md#utf-8)
-
 ```javascript
 // 判断需要多少个字节存储
 function getCodeBytes(code) {
