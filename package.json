@@ -18,17 +18,18 @@
     "url": "https://github.com/yamsfeer/blog/issues"
   },
   "homepage": "https://github.com/yamsfeer/blog#readme",
-  "devDependencies": {
-    "husky": "3.0.1"
-  },
   "husky": {
     "hooks": {
       "pre-push": "sh deploy.sh"
     }
   },
+  "devDependencies": {
+    "husky": "3.0.1"
+  },
   "dependencies": {
-    "@vuepress/plugin-search": "2.0.0-beta.61",
     "vue": "^3.2.36",
-    "vuepress-theme-hope": "2.0.0-beta.166"
+    "vuepress": "2.0.0-beta.61",
+    "@vuepress/client": "2.0.0-beta.61",
+    "vuepress-theme-hope": "2.0.0-beta.201"
   }
 }
