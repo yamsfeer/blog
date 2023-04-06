@@ -1,6 +1,6 @@
 import { defineUserConfig } from 'vuepress'
 import { hopeTheme } from "vuepress-theme-hope"
-import { searchPlugin } from '@vuepress/plugin-search'
+// import { searchPlugin } from '@vuepress/plugin-search'
 
 import { navbar, sidebar } from './menu';
 
@@ -11,11 +11,12 @@ const config = {
   base: '/blog/',
   title: 'yamsfeer',
   head: [
-    ['link', { rel: 'icon', href: '/logo.ico' }]
+    ['link', { rel: 'icon', href: '/logo.ico' }],
+    // ['meta', { name: 'referrer', content: 'no-referrer' }],
   ],
   shouldPrefetch: false, // pwa
 
-  plugins: [searchPlugin()],
+  // plugins: [searchPlugin()],
 
   theme: hopeTheme({
     navbar,

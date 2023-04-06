@@ -87,8 +87,6 @@ vue3 提供了 composition API 来进行逻辑组织和复用，与 vue2 的 opt
 * 利于类型推导
 * 代码体积更小，利于 tree-shaking
 
-
-
 在 vue2 中，可以用 mixins 实现逻辑复用，但当一个组件内使用多个 mixin 时有两个问题：
 
 * 命名冲突

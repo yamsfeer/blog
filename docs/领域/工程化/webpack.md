@@ -640,3 +640,5 @@ module.exports = {
 ```
 
 详情参考[文档](https://webpack.docschina.org/guides/code-splitting/)。
+
+[透过分析 webpack 面试题，构建 webpack5.x 知识体系](https://juejin.cn/post/7023242274876162084)

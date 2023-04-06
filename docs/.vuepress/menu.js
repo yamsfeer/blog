@@ -32,7 +32,7 @@ export const navbar = [
       { text: '数据结构', link: '/数据结构/堆.md' },
       { text: '经典算法', link: '/经典算法/排序算法.md' },
       { text: '算法设计与分析', link: '/算法设计与分析/开始.md' },
-      { text: '设计模式', link: '/设计模式/观察者模式VS发布订阅.md' },
+      { text: '设计模式', link: '/设计模式/1.单例模式.md' },
     ]
   },
   {
@@ -68,6 +68,7 @@ export const navbar = [
       { text: '工程化', link: '/领域/工程化/工具链' },
       { text: '架构', link: '/领域/架构/组件化' },
       { text: '性能优化', link: '/领域/性能优化/性能优化' },
+      { text: '前端监控', link: '/领域/前端监控/1.监控概览' },
       { text: 'lowcode', link: '/领域/lowcode/逻辑编排' },
       // { text: '其他', link: '/领域/其他/lowcode' },
     ]
@@ -124,6 +125,7 @@ export const sidebar = {
     { text: '工程化', prefix: '工程化', children: dir('领域/工程化') },
     { text: '架构', prefix: '架构', children: dir('领域/架构') },
     { text: '性能优化', prefix: '性能优化', children: dir('领域/性能优化') },
+    { text: '前端监控', prefix: '前端监控', children: dir('领域/前端监控') },
     { text: 'lowcode', prefix: 'lowcode', children: dir('领域/lowcode') },
   ],
   '/源码/vue': [{ text: 'vue', children: dir('源码/vue') }],
