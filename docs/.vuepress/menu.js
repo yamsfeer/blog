@@ -1,5 +1,5 @@
 import path from 'path'
-import { readdirSync, stat } from 'fs'
+import { readdirSync } from 'fs'
 
 function dir(dirname) {
   return readdirSync(path.resolve(`${__dirname}/../${dirname}`))
@@ -10,6 +10,13 @@ function dir(dirname) {
         link: filename
       }
     })
+}
+
+function sort(files) {
+  return files.sort((A, B) => {
+    const { text: nameA } = A, { text: nameB } = B
+    return nameA.split('.')[0] - nameB.split('.')[0]
+  })
 }
 
 export const navbar = [
@@ -98,7 +105,7 @@ export const sidebar = {
   '/经典算法/': [{ text: '经典算法', children: dir('经典算法') }],
   '/leetcode/': [{ text: 'leetcode', children: dir('leetcode') }],
   '/手写代码/': [{ text: '手写代码', children: dir('手写代码') }],
-  '/设计模式/': [{ text: '设计模式', children: dir('设计模式') }],
+  '/设计模式/': [{ text: '设计模式', children: sort(dir('设计模式')) }],
 
   '/计算机基础/计算机科学': [{ text: '计算机科学', children: dir('计算机基础/计算机科学') }],
   '/计算机基础/计算机体系结构': [{ text: '计算机体系结构', children: dir('计算机基础/计算机体系结构') }],
@@ -107,7 +114,7 @@ export const sidebar = {
   '/计算机基础/编译原理': [{ text: '编译原理', children: dir('计算机基础/编译原理') }],
   '/计算机基础/计算机网络': [{ text: '计算机网络', children: dir('计算机基础/计算机网络') }],
 
-  '/数学/线性代数的本质/': [{ text: '线性代数的本质', children: dir('数学/线性代数的本质') }],
+  '/数学/线性代数的本质/': [{ text: '线性代数的本质', children: sort(dir('数学/线性代数的本质')) }],
   '/数学/几何/': [{ text: '几何', children: dir('数学/几何') }],
   '/数学/微积分/': [{ text: '微积分', children: dir('数学/微积分') }],
   '/数学/傅里叶变换/': [{ text: '傅里叶变换', children: dir('数学/傅里叶变换') }],
