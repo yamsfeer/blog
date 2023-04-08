@@ -43,21 +43,14 @@ export const navbar = [
     ]
   },
   {
-    text: '源码',
-    children: [
-      { text: 'vue', link: '/源码/vue/1. 准备工作.md' },
-      { text: 'vue3', link: '/源码/vue3/vue3的改进.md' },
-    ]
-  },
-  {
     text: '图形学',
     children: [
       { text: 'games101', link: '/图形学/现代计算机图形学入门/0.序言.md' },
       { text: '线性代数', link: '/数学/线性代数的本质/0.序言.md' },
       { text: '几何', link: '/数学/几何/欧几里得几何与非欧几何.md' },
-      // { text: '图形学API', link: '/图形学/图形学API/webGL.md' },
-      // { text: '傅里叶变换', link: '/数学/傅里叶变换/傅里叶变换.md' },
-      // { text: '微积分', link: '/数学/微积分/微积分基本概念.md' },
+      { text: '图形学API', link: '/图形学/图形学API/webGL.md' },
+      { text: '傅里叶变换', link: '/数学/傅里叶变换/傅里叶变换.md' },
+      { text: '微积分', link: '/数学/微积分/微积分基本概念.md' },
     ]
   },
   {
@@ -67,6 +60,7 @@ export const navbar = [
       { text: 'JS基础', link: '/JS基础/执行上下文.md' },
       { text: 'css世界', link: '/css世界/1.块级元素与width、height.md' },
       { text: '浏览器', link: '/浏览器/图解V8/1.图解V8.md' },
+      { text: '源码', link: '/源码/vue3/0.vue3的改进.md' },
     ]
   },
   {
@@ -77,7 +71,8 @@ export const navbar = [
       { text: '性能优化', link: '/领域/性能优化/性能优化' },
       { text: '前端监控', link: '/领域/前端监控/1.监控概览' },
       { text: 'lowcode', link: '/领域/lowcode/逻辑编排' },
-      // { text: '其他', link: '/领域/其他/lowcode' },
+      { text: '动画', link: '/领域/动画/tween动画' },
+      { text: '其他', link: '/领域/其他/概述' },
     ]
   },
   { text: 'clutter', link: '/clutter/思维导图.md' },
@@ -127,16 +122,19 @@ export const sidebar = {
     { text: '图解V8', prefix: '图解V8', children: dir('浏览器/图解V8') },
     { text: '浏览器', children: dir('浏览器') }
   ],
-  '/领域/': [
-    { text: '概述', link: '/领域/概述.md' },
-    { text: '工程化', prefix: '工程化', children: dir('领域/工程化') },
-    { text: '架构', prefix: '架构', children: dir('领域/架构') },
-    { text: '性能优化', prefix: '性能优化', children: dir('领域/性能优化') },
-    { text: '前端监控', prefix: '前端监控', children: dir('领域/前端监控') },
-    { text: 'lowcode', prefix: 'lowcode', children: dir('领域/lowcode') },
+
+  '/领域/工程化': [{ text: '工程化', children: dir('领域/工程化') }],
+  '/领域/架构': [{ text: '架构', children: dir('领域/架构') }],
+  '/领域/性能优化': [{ text: '性能优化', children: dir('领域/性能优化') }],
+  '/领域/前端监控': [{ text: '前端监控', children: dir('领域/前端监控') }],
+  '/领域/lowcode': [{ text: 'lowcode', children: dir('领域/lowcode') }],
+  '/领域/动画': [{ text: '动画', children: dir('领域/动画') }],
+  '/领域/其他': [{ text: '其他', children: dir('领域/其他') }],
+
+  '/源码': [
+    { text: 'vue3', prefix: 'vue3', children: dir('源码/vue3') },
+    { text: 'vue', prefix: 'vue', children: dir('源码/vue') }
   ],
-  '/源码/vue': [{ text: 'vue', children: dir('源码/vue') }],
-  '/源码/vue3': [{ text: 'vue3', children: dir('源码/vue3') }],
   '/css世界/': [{ text: 'css', children: dir('css世界') }],
 
   '/JS基础/': [{ text: 'JS基础', children: dir('JS基础') }],

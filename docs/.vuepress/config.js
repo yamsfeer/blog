@@ -1,6 +1,7 @@
 import { defineUserConfig } from 'vuepress'
 import { hopeTheme } from "vuepress-theme-hope"
 // import { searchPlugin } from '@vuepress/plugin-search'
+import { searchProPlugin } from 'vuepress-plugin-search-pro'
 
 import { navbar, sidebar } from './menu';
 
@@ -17,6 +18,7 @@ const config = {
   shouldPrefetch: false, // pwa
 
   // plugins: [searchPlugin()],
+  plugins: [searchProPlugin({ indexContent: true })],
 
   theme: hopeTheme({
     navbar,
@@ -47,7 +49,5 @@ const config = {
     },
   }),
 }
-
-// export default config
 
 export default defineUserConfig(config)
