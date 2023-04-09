@@ -1,6 +1,6 @@
 # git
 
-![](https://tva1.sinaimg.cn/large/e6c9d24egy1h287xxeqpoj20wk09g3zi.jpg)
+![](https://raw.githubusercontent.com/yamsfeer/pic-bed/master/git工作流.jpg)
 
 ```
 - Workspace：工作区
@@ -447,7 +447,7 @@ https://username:ghp_Wkl.....xxxx@github.com
 
 此模式下会将登录凭证加密处理并存储在 mac 的 osxkeychain 中。可以用 Keychain Access 查看。
 
-![](https://tva1.sinaimg.cn/large/e6c9d24egy1h287whfschj217u0u00vv.jpg)
+![](https://raw.githubusercontent.com/yamsfeer/pic-bed/master/oxskeychain.jpg)
 
 也可以通过命令删除凭据：
 
