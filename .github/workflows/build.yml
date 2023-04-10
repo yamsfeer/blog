@@ -39,6 +39,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: vuepress build
+        env:
+          NODE_OPTIONS: --max_old_space_size=4096
         run: pnpm run build
         
       - name: Deploy to GitHub Pages
