@@ -23,44 +23,43 @@ export const navbar = [
   {
     text: '计算机基础',
     children: [
-      { text: '计算机科学', link: '/计算机基础/计算机科学/计算理论.md' },
-      { text: '汇编语言', link: '/计算机基础/汇编语言/MIPS汇编入门.md' },
-      { text: '编译原理', link: '/计算机基础/编译原理/1. 编译器介绍.md' },
-      { text: '操作系统', link: '/计算机基础/操作系统/1.0计算机启动.md' },
-      { text: '计算机体系结构', link: '/计算机基础/计算机体系结构/冯诺依曼结构.md' },
-      // { text: '计算机网络', link: '/计算机基础/计算机网络/' },
+      { text: '计算机科学', link: '/计算机基础/计算机科学/计算理论' },
+      { text: '汇编语言', link: '/计算机基础/汇编语言/MIPS汇编入门' },
+      { text: '编译原理', link: '/计算机基础/编译原理/1. 编译器介绍' },
+      { text: '操作系统', link: '/计算机基础/操作系统/1.0计算机启动' },
+      { text: '计算机体系结构', link: '/计算机基础/计算机体系结构/冯诺依曼结构' },
     ]
   },
   {
     text: '编程',
     children: [
-      { text: 'leetcode', link: '/leetcode/0.开始.md' },
-      { text: '手写代码', link: '/手写代码/防抖节流.md' },
-      { text: '数据结构', link: '/数据结构/堆.md' },
-      { text: '经典算法', link: '/经典算法/排序算法.md' },
-      { text: '算法设计与分析', link: '/算法设计与分析/开始.md' },
-      { text: '设计模式', link: '/设计模式/1.单例模式.md' },
+      { text: 'leetcode', link: '/leetcode/0.开始' },
+      { text: '手写代码', link: '/手写代码/防抖节流' },
+      { text: '数据结构', link: '/数据结构/堆' },
+      { text: '经典算法', link: '/经典算法/排序算法' },
+      { text: '算法设计与分析', link: '/算法设计与分析/开始' },
+      { text: '设计模式', link: '/设计模式/1.单例模式' },
     ]
   },
   {
     text: '图形学',
     children: [
-      { text: 'games101', link: '/图形学/现代计算机图形学入门/0.序言.md' },
-      { text: '线性代数', link: '/数学/线性代数的本质/0.序言.md' },
-      { text: '几何', link: '/数学/几何/欧几里得几何与非欧几何.md' },
-      { text: '图形学API', link: '/图形学/图形学API/webGL.md' },
-      { text: '傅里叶变换', link: '/数学/傅里叶变换/傅里叶变换.md' },
-      { text: '微积分', link: '/数学/微积分/微积分基本概念.md' },
+      { text: 'games101', link: '/图形学/现代计算机图形学入门/0.序言' },
+      { text: '线性代数', link: '/数学/线性代数的本质/0.序言' },
+      { text: '几何', link: '/数学/几何/欧几里得几何与非欧几何' },
+      { text: '图形学API', link: '/图形学/图形学API/webGL' },
+      { text: '傅里叶变换', link: '/数学/傅里叶变换/傅里叶变换' },
+      { text: '微积分', link: '/数学/微积分/微积分基本概念' },
     ]
   },
   {
     text: '前端',
     children: [
-      { text: '你不知道的JS', link: '/YDKJS/YDKJS(上卷)/1-1 作用域与编译器.md' },
-      { text: 'JS基础', link: '/JS基础/执行上下文.md' },
-      { text: 'css世界', link: '/css世界/1.块级元素与width、height.md' },
-      { text: '浏览器', link: '/浏览器/图解V8/1.图解V8.md' },
-      { text: '源码', link: '/源码/vue3/0.vue3的改进.md' },
+      { text: '你不知道的JS', link: '/YDKJS/YDKJS(上卷)/1-1 作用域与编译器' },
+      { text: 'JS基础', link: '/JS基础/执行上下文' },
+      { text: 'css世界', link: '/css世界/1.块级元素与width、height' },
+      { text: '浏览器', link: '/浏览器/图解V8/1.图解V8' },
+      { text: '源码', link: '/源码/vue3/0.vue3的改进' },
     ]
   },
   {
@@ -70,12 +69,12 @@ export const navbar = [
       { text: '架构', link: '/领域/架构/组件化' },
       { text: '性能优化', link: '/领域/性能优化/性能优化' },
       { text: '前端监控', link: '/领域/前端监控/1.监控概览' },
-      { text: 'lowcode', link: '/领域/lowcode/逻辑编排' },
       { text: '动画', link: '/领域/动画/tween动画' },
+      { text: '安全', link: '/领域/安全/https协议' },
       { text: '其他', link: '/领域/其他/概述' },
     ]
   },
-  { text: 'clutter', link: '/clutter/思维导图.md' },
+  { text: 'clutter', link: '/clutter/思维导图' },
 ];
 
 export const sidebar = {
@@ -127,8 +126,8 @@ export const sidebar = {
   '/领域/架构': [{ text: '架构', children: dir('领域/架构') }],
   '/领域/性能优化': [{ text: '性能优化', children: dir('领域/性能优化') }],
   '/领域/前端监控': [{ text: '前端监控', children: dir('领域/前端监控') }],
-  '/领域/lowcode': [{ text: 'lowcode', children: dir('领域/lowcode') }],
   '/领域/动画': [{ text: '动画', children: dir('领域/动画') }],
+  '/领域/安全': [{ text: '安全', children: dir('领域/安全') }],
   '/领域/其他': [{ text: '其他', children: dir('领域/其他') }],
 
   '/源码': [
