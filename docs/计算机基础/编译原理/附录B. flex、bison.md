@@ -136,7 +136,7 @@ exp: factor       /* default $$ = $1 */
 
 flex 和 bison 的协作关系：
 
-<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxozrxriqij30ib0avwez.jpg" style="zoom:80%;" />
+<img src="http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gxozrxriqij30ib0avwez.jpg" style="zoom:80%;" />
 
 以四则运算为例，用 flex 和 bison 写一个运算器。
 
@@ -222,7 +222,7 @@ clean:
 ```shell
 $ make
 $ ./calc
-2+3*2 
+2+3*2
 = 8
 1+a
 Mystery character a

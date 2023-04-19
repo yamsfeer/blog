@@ -12,7 +12,7 @@ proxy data 属性，检查重名。
 
 ## 响应式
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6097bb7630dc44a68cb6b4c4dbef62f1~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
+![](https://raw.githubusercontent.com/yamsfeer/pic-bed/master/6097bb7630dc44a68cb6b4c4dbef62f1~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
 
 vue 的响应式原理是发布订阅模式。
 

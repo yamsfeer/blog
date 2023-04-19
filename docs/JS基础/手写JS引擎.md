@@ -4,7 +4,7 @@
 
 要编译一门语言，通常需要词法分析、语法分析、语法制导翻译等过程。
 
-![](https://tva1.sinaimg.cn/large/008i3skNgy1gty3jsr771j61m40i2aeg02.jpg)
+![](http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gty3jsr771j61m40i2aeg02.jpg)
 
 ## 词法分析
 
@@ -12,11 +12,11 @@
 
 ### 操作符状态机
 
-<img class="img-mid" src="https://tva1.sinaimg.cn/large/008i3skNgy1gx3fqmxa60j30g60mjq4g.jpg" style="zoom:80%;" />
+<img class="img-mid" src="http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gx3fqmxa60j30g60mjq4g.jpg" style="zoom:80%;" />
 
 ### Number 状态机
 
-<img class="img-mid" src="https://tva1.sinaimg.cn/large/008i3skNgy1gx3fqqs0uuj30gw0a774r.jpg" style="zoom:80%;" />
+<img class="img-mid" src="http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gx3fqqs0uuj30gw0a774r.jpg" style="zoom:80%;" />
 
 ## 语法分析
 
@@ -24,7 +24,7 @@
 
 抽象语法树的节点主要有 因子（Factor）、表达式（Expr）、语句（Stmt）三大类型。其中 Factor 有变量和字面量（直接量），语句也有 if 语句、for 语句等。它们的关系如下图：
 
-<img class="img-mid" src="https://tva1.sinaimg.cn/large/008i3skNgy1gx3fqrjbemj30f807xjro.jpg" style="zoom:80%;" />
+<img class="img-mid" src="http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gx3fqrjbemj30f807xjro.jpg" style="zoom:80%;" />
 
 ### 推导关系
 
@@ -38,7 +38,7 @@ $$
 
 解析过程中的调用关系：
 
-<img class="img-mid" src="https://tva1.sinaimg.cn/large/008i3skNgy1gx3fqpvm4wj30gs06ymxf.jpg"  />
+<img class="img-mid" src="http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gx3fqpvm4wj30gs06ymxf.jpg"  />
 
 ### 声明语句
 
@@ -46,7 +46,7 @@ $$
 DeclareStmt \to var \ Variable = Expr
 $$
 
-![](https://tva1.sinaimg.cn/large/008i3skNgy1gx3fqsg90dj30jl011wef.jpg)
+![](http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gx3fqsg90dj30jl011wef.jpg)
 
 ### 赋值语句
 
@@ -54,7 +54,7 @@ $$
 AssignStmt \to Variable = Expr
 $$
 
-![](https://tva1.sinaimg.cn/large/008i3skNgy1gx3fqop3rwj30fj011gli.jpg)
+![](http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gx3fqop3rwj30fj011gli.jpg)
 
 ### if 语句
 
@@ -63,7 +63,7 @@ IfStmt \to if(Expr) \ Block \ Tail \\
 Tail \to else \ Block \ | \ else \ IfStmt \ | \ \epsilon
 $$
 
-![](https://tva1.sinaimg.cn/large/008i3skNgy1gx3fqnu6i6j30om03e3ym.jpg)
+![](http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gx3fqnu6i6j30om03e3ym.jpg)
 
 ### function
 
@@ -318,16 +318,16 @@ F -> 0|1|2|3|4|5|6|7|8|9
 
 符号表用 树 + 哈希表 实现，存储每个符号的词法作用域，以及它在词法作用域的相对位置。
 
-<img class="img-mid" src="https://tva1.sinaimg.cn/large/008i3skNgy1gx5ilbumjnj30a3088mxc.jpg"  />
+<img class="img-mid" src="http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gx5ilbumjnj30a3088mxc.jpg"  />
 
 
 
 
 
-<img class="img-mid" src="https://tva1.sinaimg.cn/large/008i3skNgy1gx5ilcb17lj30bb06cglo.jpg"  />
+<img class="img-mid" src="http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gx5ilcb17lj30bb06cglo.jpg"  />
 
 
 
 
 
-<img class="img-mid" src="https://tva1.sinaimg.cn/large/008i3skNgy1gx5ilb8hfkj308m06rjrg.jpg"  />
+<img class="img-mid" src="http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gx5ilb8hfkj308m06rjrg.jpg"  />
