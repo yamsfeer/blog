@@ -136,7 +136,7 @@ exp: factor       /* default $$ = $1 */
 
 flex 和 bison 的协作关系：
 
-<img src="http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gxozrxriqij30ib0avwez.jpg" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/yamsfeer/pic-bed/master/008i3skNgy1gxozrxriqij30ib0avwez.jpg" style="zoom:80%;" />
 
 以四则运算为例，用 flex 和 bison 写一个运算器。
 

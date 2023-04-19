@@ -2,7 +2,7 @@
 
 要实现正则表达式，需要将RE逐步转换成最小DFA。它们之间的转换关系和相关算法如下图
 
-![](http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gsvlz5ftrlj30m0028t8q.jpg)
+![](https://raw.githubusercontent.com/yamsfeer/pic-bed/master/008i3skNgy1gsvlz5ftrlj30m0028t8q.jpg)
 
 我们先来回想下RE的定义和表示方法：
 
@@ -37,13 +37,13 @@ e ->
 
 针对字符集$\Sigma = \{A,B\}$，归纳转换过程如下图：
 
-<img src="http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gsvy4iiylbj30ii0d1q3k.jpg" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/yamsfeer/pic-bed/master/008i3skNgy1gsvy4iiylbj30ii0d1q3k.jpg" style="zoom:80%;" />
 
 ### Thompson算法例子
 
 构造与正则表达式`A(B|C)*`等价的NFA。构造过程如下图：
 
-<img src="http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gsw28hlmsbj30p60g5dgp.jpg" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/yamsfeer/pic-bed/master/008i3skNgy1gsw28hlmsbj30p60g5dgp.jpg" style="zoom:80%;" />
 
 ## 子集构造算法
 
@@ -93,7 +93,7 @@ $\varepsilon$空串边表示一种零代价的转换，$s_1$可以在没有任�
 
 `DFA`如下图：
 
-<img src="http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gsx0ukqi1nj30b907tt8q.jpg" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/yamsfeer/pic-bed/master/008i3skNgy1gsx0ukqi1nj30b907tt8q.jpg" style="zoom:80%;" />
 
 ### 对算法的讨论
 
@@ -161,7 +161,7 @@ while(workList != [])
 
 合并过程见下图：
 
-<img src="http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gsx32a5d10j309z0a1dg1.jpg" style="zoom:90%;" />
+<img src="https://raw.githubusercontent.com/yamsfeer/pic-bed/master/008i3skNgy1gsx32a5d10j309z0a1dg1.jpg" style="zoom:90%;" />
 
 最终，我们得到了最终的`A(B|C)*`等价的`最小DFA` 。
 
@@ -179,7 +179,7 @@ while(workList != [])
 
    对于状态集合$S$和字符集合$\Sigma$，如果$S$中的状态$s_1,s_2$对$\Sigma$中的字符$c$的行为是一致的，则$s_1,s_2$对$c$是等价的，它们可以划分为一组。
 
-   ![](http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gsxqf8efp6j309505d3yo.jpg)
+   ![](https://raw.githubusercontent.com/yamsfeer/pic-bed/master/008i3skNgy1gsxqf8efp6j309505d3yo.jpg)
 
    上图中，`1,2,3`经过`A`后分别进入`S2`和`S3`，那么`S1`可划分为`{1,2}`和`{3}`。
 
@@ -201,7 +201,7 @@ hopcroft()
 
 回忆下`A(B|C)*`例子在经过`子集构造算法`后得到的`DFA`：
 
-<img src="http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gsx0ukqi1nj30b907tt8q.jpg" style="zoom:70%;" />
+<img src="https://raw.githubusercontent.com/yamsfeer/pic-bed/master/008i3skNgy1gsx0ukqi1nj30b907tt8q.jpg" style="zoom:70%;" />
 
 1. 根据是否接受划分为$N = \{q_0\}, \: A = \{q_1,q_2,q_3\}$
 
@@ -216,7 +216,7 @@ hopcroft()
 
 5. 等价替换和得到`A(B|C)*`的`最小DFA`
 
-   ![](http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gsxqx6j53zj306g01tglf.jpg)
+   ![](https://raw.githubusercontent.com/yamsfeer/pic-bed/master/008i3skNgy1gsxqx6j53zj306g01tglf.jpg)
 
 ## `DFA`的数据结构表示
 
@@ -232,7 +232,7 @@ hopcroft()
 
 上文我们已经得到`A(B|C)*`的`最小DFA`，如下图：
 
-![](http://rt9iekfji.hn-bkt.clouddn.com/008i3skNgy1gsxqx6j53zj306g01tglf.jpg)
+![](https://raw.githubusercontent.com/yamsfeer/pic-bed/master/008i3skNgy1gsxqx6j53zj306g01tglf.jpg)
 
 它的**状态转移表**如下：
 

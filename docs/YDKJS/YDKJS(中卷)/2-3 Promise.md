@@ -75,7 +75,7 @@
 * promise 只能从 pending 变为 resolved，且只能改变一次。
 * 从 pending 变为 resolved 有两种途径：fullfill 或 reject。
 
-<img class="img-mid" src="http://rt9iekfji.hn-bkt.clouddn.com/e6c9d24egy1h61pptyrocj20a007cq30.jpg" style="zoom:80%;" />
+<img class="img-mid" src="https://raw.githubusercontent.com/yamsfeer/pic-bed/master/e6c9d24egy1h61pptyrocj20a007cq30.jpg" style="zoom:80%;" />
 
 其中容易引起误解的是resolve。
 
