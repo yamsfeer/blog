@@ -21,13 +21,14 @@ function sort(files) {
 
 export const navbar = [
   {
-    text: '计算机基础',
+    text: '计算机',
     children: [
+      { text: '编译原理', link: '/计算机基础/编译原理/1. 编译器介绍' },
+      { text: '计算机通识', link: '/计算机基础/计算机通识/RSA算法' },
+      { text: '体系结构', link: '/计算机基础/计算机体系结构/冯诺依曼结构' },
       { text: '计算机科学', link: '/计算机基础/计算机科学/计算理论' },
       { text: '汇编语言', link: '/计算机基础/汇编语言/MIPS汇编入门' },
-      { text: '编译原理', link: '/计算机基础/编译原理/1. 编译器介绍' },
       { text: '操作系统', link: '/计算机基础/操作系统/1.0计算机启动' },
-      { text: '计算机体系结构', link: '/计算机基础/计算机体系结构/冯诺依曼结构' },
     ]
   },
   {
@@ -37,7 +38,7 @@ export const navbar = [
       { text: '手写代码', link: '/手写代码/防抖节流' },
       { text: '数据结构', link: '/数据结构/堆' },
       { text: '经典算法', link: '/经典算法/排序算法' },
-      { text: '算法设计与分析', link: '/算法设计与分析/开始' },
+      { text: '算法分析', link: '/算法设计与分析/开始' },
       { text: '设计模式', link: '/设计模式/1.单例模式' },
     ]
   },
@@ -47,16 +48,16 @@ export const navbar = [
       { text: 'games101', link: '/图形学/现代计算机图形学入门/0.序言' },
       { text: '线性代数', link: '/数学/线性代数的本质/0.序言' },
       { text: '几何', link: '/数学/几何/欧几里得几何与非欧几何' },
-      { text: '图形学API', link: '/图形学/图形学API/webGL' },
-      { text: '傅里叶变换', link: '/数学/傅里叶变换/傅里叶变换' },
-      { text: '微积分', link: '/数学/微积分/微积分基本概念' },
+      // { text: '图形学API', link: '/图形学/图形学API/webGL' },
+      // { text: '傅里叶变换', link: '/数学/傅里叶变换/傅里叶变换' },
+      // { text: '微积分', link: '/数学/微积分/微积分基本概念' },
     ]
   },
   {
     text: '前端',
     children: [
       { text: '你不知道的JS', link: '/YDKJS/YDKJS(上卷)/1-1 作用域与编译器' },
-      { text: 'JS基础', link: '/JS基础/执行上下文' },
+      { text: 'ECMAScript', link: '/ECMAScript/执行上下文' },
       { text: 'css世界', link: '/css世界/1.块级元素与width、height' },
       { text: '浏览器', link: '/浏览器/图解V8/1.图解V8' },
       { text: '源码', link: '/源码/vue3/0.vue3的改进' },
@@ -65,13 +66,10 @@ export const navbar = [
   {
     text: '领域',
     children: [
-      { text: '工程化', link: '/领域/工程化/工具链' },
+      { text: '工程', link: '/领域/工程化/工具链' },
       { text: '架构', link: '/领域/架构/组件化' },
-      { text: '性能优化', link: '/领域/性能优化/性能优化' },
-      { text: '前端监控', link: '/领域/前端监控/1.监控概览' },
-      { text: '动画', link: '/领域/动画/tween动画' },
-      { text: '安全', link: '/领域/安全/https协议' },
-      { text: '其他', link: '/领域/其他/概述' },
+      { text: '性能', link: '/领域/性能优化/性能优化' },
+      { text: '监控', link: '/领域/前端监控/1.监控概览' },
     ]
   },
   { text: 'clutter', link: '/clutter/思维导图' },
@@ -103,6 +101,7 @@ export const sidebar = {
 
   '/计算机基础/计算机科学': [{ text: '计算机科学', children: dir('计算机基础/计算机科学') }],
   '/计算机基础/计算机体系结构': [{ text: '计算机体系结构', children: dir('计算机基础/计算机体系结构') }],
+  '/计算机基础/计算机通识': [{ text: '计算机通识', children: dir('计算机基础/计算机通识') }],
   '/计算机基础/汇编语言': [{ text: '汇编语言', children: dir('计算机基础/汇编语言') }],
   '/计算机基础/操作系统': [{ text: '操作系统', children: dir('计算机基础/操作系统') }],
   '/计算机基础/编译原理': [{ text: '编译原理', children: dir('计算机基础/编译原理') }],
@@ -126,9 +125,6 @@ export const sidebar = {
   '/领域/架构': [{ text: '架构', children: dir('领域/架构') }],
   '/领域/性能优化': [{ text: '性能优化', children: dir('领域/性能优化') }],
   '/领域/前端监控': [{ text: '前端监控', children: dir('领域/前端监控') }],
-  '/领域/动画': [{ text: '动画', children: dir('领域/动画') }],
-  '/领域/安全': [{ text: '安全', children: dir('领域/安全') }],
-  '/领域/其他': [{ text: '其他', children: dir('领域/其他') }],
 
   '/源码': [
     { text: 'vue3', prefix: 'vue3', children: dir('源码/vue3') },
@@ -136,5 +132,5 @@ export const sidebar = {
   ],
   '/css世界/': [{ text: 'css', children: dir('css世界') }],
 
-  '/JS基础/': [{ text: 'JS基础', children: dir('JS基础') }],
+  '/ECMAScript/': [{ text: 'ECMAScript', children: dir('ECMAScript') }],
 };
