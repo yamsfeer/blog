@@ -123,19 +123,25 @@ vite 将应用中的模块区分为 **依赖** 和 **源码** 两类。
 
 ### 路径解析
 
-假设我们要依赖 `lodash` 模块。
+假设我们要在 main.js 中引入 lodash-es。
 
 ```javascript
-import _ from 'lodash-es'
+import lodash from 'lodash-es'
 ```
 
-虽然它是 ESM，但它存在于 `node_modules` 文件夹中，浏览器不支持默认引入 `node_modules` 中的内容。因此 vite 需要做路径解析，将 `lodash-es` 解析成相对路径或绝对路径。
+虽然它是 ESM，但浏览器仅支持引入相对路径或绝对路径的文件。
 
-通过 vite 启动项目后，浏览器请求的路径为：
+```
+Uncaught TypeError: Failed to resolve module specifier "lodash-es". Relative references must start with either "/", "./", or "../".
+```
+
+因此 vite 需要做路径解析，将 main.js 代码中的地址替换成相对路径或绝对路径。
 
 ```javascript
-import _ from "/node_modules/.vite/deps/lodash-es.js?v=d45e265f";
+import lodash from "/node_modules/.vite/deps/lodash-es.js?v=d45e265f";
 ```
+
+地址中 `?v=d45e265f` 表示的是 vite 预构建 lodash 后的 hash 值。
 
 ### 依赖预构建
 
@@ -155,7 +161,7 @@ var root = freeGlobal_default || freeSelf || Function("return this")();
 // ...
 ```
 
-lodash-es 包的内容：
+对比原本 lodash-es 包的内容：
 
 ```javascript
 export { default as add } from './add.js';
@@ -164,19 +170,21 @@ export { default as ary } from './ary.js';
 // ... 超过 600 个文件依赖
 ```
 
-可以看到 vite 将 lodash-es 打包成了一个文件，即 `/node_modules/.vite/deps/lodash-es.js?v=d45e265f`。这样做的原因有两个：
+可以看到 vite 将 lodash-es 打包成了一个文件，即 `/node_modules/.vite/deps/lodash-es.js?v=d45e265f`。
+
+这样做的原因有两个：
 
 * 依赖合并为单个模块，减少HTTP请求
 
-  如果在源代码中这样引入 lodash-es
+  如果在源代码中这样引入 lodash
 
   ```javascript
-  import _ from '../node_modules/loadsh-es'
+  import lodash from '/node_modules/loadsh-es'
   ```
 
-  这样不用路径解析也能找到 lodash-es 模块，但浏览器会根据 lodash-es 的内容，将所有文件内容请求下来，也就是说，将会发起 600 多个 http 请求，大量的请求会在浏览器端造成网络拥塞，导致页面的加载速度相当慢。
+  这样即使不用路径解析，浏览器也能请求到 lodash 的入口文件，但根据入口文件的内容，浏览器还需要发起超过 600 个请求，大量的请求会在浏览器端造成网络拥塞，导致页面加载速度缓慢。
 
-  通过预构建 `lodash-es` 成为一个模块文件，我们就只需要一个 HTTP 请求了。
+  vite 将 lodash 预构建成一个文件，这样就只需要一个请求了。
 
 * 统一模块格式
 
@@ -185,7 +193,7 @@ export { default as ary } from './ary.js';
   比如 commonjs 格式的 lodash：
 
   ```javascript
-  import _ from 'lodash';
+  import lodash from 'lodash'
   ```
 
   预构建后的代码为：
@@ -205,16 +213,16 @@ export { default as ary } from './ary.js';
 
 ### 总结
 
-vite 开发时不抓取整个应用的依赖，而是以 ESM 的方式提供源码，而且是当浏览器发起模块请求时才提供，即按需动态编译。
+vite 开发时不抓取整个应用的依赖，而是以 ESM 的方式提供源码，且当浏览器发起模块请求时才提供，即按需动态编译。
 
 * 路径解析
 
-  使浏览器能获取 `node_modules` 中的文件
+  通过解析成绝对或相对路径，使浏览器能 import 第三方包。
 
 * 依赖预构建
 
   * 将所有模块统一成 ESM
   * 将单个第三方包打包成一个文件
-  * 源码模块的请求会根据 `304 Not Modified` 进行协商缓存，依赖模块请求则会进行 http 强缓存
+  * 源码模块的请求会根据 `304 Not Modified` 进行协商缓存，第三方依赖模块请求则会进行 http 强缓存
 
 * 由于是 ESM 模块，只需将已编辑的模块与其最近的 HMR 边界之间的链失活，即可快速更新
