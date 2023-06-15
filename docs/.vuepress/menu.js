@@ -58,9 +58,16 @@ export const navbar = [
     children: [
       { text: 'ECMAScript', link: '/前端/ECMAScript/执行上下文' },
       { text: '浏览器', link: '/前端/浏览器/图解V8/1.图解V8' },
-      { text: '源码', link: '/前端/vue源码/vue3/0.vue3的改进' },
       { text: '你不知道的JS', link: '/前端/YDKJS/YDKJS(上卷)/1-1 作用域与编译器' },
       { text: 'css世界', link: '/前端/css世界/1.块级元素与width、height' },
+    ]
+  },
+  {
+    text: '源码',
+    children: [
+      { text: 'vue2', link: '/源码/vue2/1.准备工作' },
+      { text: 'vue3', link: '/源码/vue3/1.overview' },
+      { text: 'webpack', link: '/源码/webpack/1.overview' },
     ]
   },
   {
@@ -91,10 +98,6 @@ export const sidebar = {
     { text: '你不知道的JS(上)', prefix: '/YDKJS/YDKJS(上卷)/', children: dir('前端/YDKJS/YDKJS(上卷)') },
     { text: '你不知道的JS(中)', prefix: '/YDKJS/YDKJS(中卷)/', children: dir('前端/YDKJS/YDKJS(中卷)') },
     { text: '你不知道的JS(下)', prefix: '/YDKJS/YDKJS(下卷)/', children: dir('前端/YDKJS/YDKJS(下卷)') },
-  ],
-  '/前端/vue源码/': [
-    { text: 'vue3', prefix: 'vue3', children: dir('前端/vue源码/vue3') },
-    { text: 'vue', prefix: 'vue', children: dir('前端/vue源码/vue') }
   ],
   '/前端/css世界/': [{ text: 'css', children: dir('前端/css世界') }],
   '/前端/ECMAScript/': [{ text: 'ECMAScript', children: dir('前端/ECMAScript') }],
@@ -136,6 +139,11 @@ export const sidebar = {
 
   '/计算机基础/图形学/现代计算机图形学入门': [{ text: '现代计算机图形学入门', children: dir('计算机基础/图形学/现代计算机图形学入门') }],
   '/计算机基础/图形学/图形学API': [{ text: '图形学API', children: dir('计算机基础/图形学/图形学API') }],
+
+  /* 源码 */
+  '/源码/vue2': [{ text: 'vue2', children: dir('源码/vue2') }],
+  '/源码/vue3': [{ text: 'vue3', children: dir('源码/vue3') }],
+  '/源码/webpack': [{ text: 'webpack', children: sort(dir('源码/webpack')) }],
 
   /* 解决方案 */
   '/解决方案/工程化': [{ text: '工程化', children: dir('解决方案/工程化') }],
