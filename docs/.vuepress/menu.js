@@ -15,7 +15,8 @@ function dir(dirname) {
 function sort(files) {
   return files.sort((A, B) => {
     const { text: nameA } = A, { text: nameB } = B
-    return nameA.split('.')[0] - nameB.split('.')[0]
+    const reg = /\d+.\d?/
+    return Number(nameA.match(reg)[0]) - Number(nameB.match(reg)[0])
   })
 }
 
@@ -142,7 +143,7 @@ export const sidebar = {
 
   /* 源码 */
   '/源码/vue2': [{ text: 'vue2', children: dir('源码/vue2') }],
-  '/源码/vue3': [{ text: 'vue3', children: dir('源码/vue3') }],
+  '/源码/vue3': [{ text: 'vue3', children: sort(dir('源码/vue3')) }],
   '/源码/webpack': [{ text: 'webpack', children: sort(dir('源码/webpack')) }],
 
   /* 解决方案 */
