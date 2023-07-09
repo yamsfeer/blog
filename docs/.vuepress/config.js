@@ -13,12 +13,16 @@ const config = {
   title: 'yamsfeer',
   head: [
     ['link', { rel: 'icon', href: '/logo.ico' }],
-    // ['meta', { name: 'referrer', content: 'no-referrer' }],
   ],
   shouldPrefetch: false, // pwa
 
-  // plugins: [searchPlugin()],
   plugins: [searchProPlugin({ indexContent: true })],
+
+  markdown: {
+    code: {
+      lineNumbers: false,
+    },
+  },
 
   theme: hopeTheme({
     navbar,
@@ -40,8 +44,6 @@ const config = {
     plugins: {
       mdEnhance: {
         katex: true,
-        // tex: true,
-        // mathjax: true,
         flowchart: true,
         mermaid: true,
         demo: true,
