@@ -4,7 +4,7 @@
 
 FCP ( First Contentful Paint ) 首次内容绘制，从开始加载到页面内容的任何部分在屏幕上完成渲染的时间。内容指的是文本、图像、非白色的 canvas 等。
 
-<img src="https://web-dev.imgix.net/image/admin/3UhlOxRc0j8Vc4DGd4dt.png?auto=format" alt="来自 google.com 的 FCP 时间轴" style="zoom: 50%;" />
+<img src="https://raw.githubusercontent.com/yamsfeer/pic-bed/master/3UhlOxRc0j8Vc4DGd4dt.png" alt="来自 google.com 的 FCP 时间轴" style="zoom: 50%;" />
 
 上图的 FCP 发生在第二帧，首批文本和图像完成渲染。
 

@@ -10,11 +10,11 @@ TBT ( Total Blocking Time ) 总阻塞时间，FCP 到 TTI 之间，所有长任�
 
 下图是一个页面加载期间主线程的时间轴：
 
-![主线程上的任务时间轴](https://web-dev.imgix.net/image/admin/clHG8Yv239lXsGWD6Iu6.svg)
+![主线程上的任务时间轴](https://raw.githubusercontent.com/yamsfeer/pic-bed/master/clHG8Yv239lXsGWD6Iu6.svg)
 
 如图所示，有 5 个任务，其中 3 个是长任务，它们的阻塞时间如下图：
 
-![显示阻塞时间的主线程任务时间轴](https://web-dev.imgix.net/image/tcFciHGuF3MxnTr1y5ue01OGLBn2/xKxwKagiz8RliuOI2Xtc.svg)
+![显示阻塞时间的主线程任务时间轴](https://raw.githubusercontent.com/yamsfeer/pic-bed/master/xKxwKagiz8RliuOI2Xtc.svg)
 
 可见，执行任务的时间为 560ms，其中阻塞时间为 345ms。
 

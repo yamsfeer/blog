@@ -18,7 +18,7 @@ TTFB ( Time to First Byte ) 第一字节时间，从资源请求开始到第一�
 
 ## TTFB 阈值
 
-<img src="https://web-dev.imgix.net/image/W3z1f5ZkBJSgL1V1IfloTIctbIF3/eNXaxPi9NdUVSTDRJFkV.svg" alt="良好的 TTFB 应该小于 0.8 秒" width="400" class="img-mid" />
+<img src="https://raw.githubusercontent.com/yamsfeer/pic-bed/master/eNXaxPi9NdUVSTDRJFkV.svg" alt="良好的 TTFB 应该小于 0.8 秒" width="400" class="img-mid" />
 
 ## 如何测量 TTFB
 

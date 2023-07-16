@@ -15,8 +15,23 @@ function dir(dirname) {
 function sort(files) {
   return files.sort((A, B) => {
     const { text: nameA } = A, { text: nameB } = B
-    const reg = /\d+.\d?/
-    return Number(nameA.match(reg)[0]) - Number(nameB.match(reg)[0])
+    const reg = /[\d+.]+/
+    if (nameA.match(reg) && nameB.match(reg)) {
+      const indexA = nameA.match(reg)[0].split('.') // '12.1.3'
+      const indexB = nameB.match(reg)[0].split('.')
+
+      let i = 0
+      let length = Math.max(indexA.length, indexB.length)
+      while (i < length) {
+        let A = indexA[i] || 0 // 超出的部分用 0 补充
+        let B = indexB[i] || 0
+        if (A === B) {
+          i++
+          continue
+        }
+        return A - B
+      }
+    }
   })
 }
 
@@ -58,6 +73,7 @@ export const navbar = [
     text: '前端',
     children: [
       { text: 'ECMAScript', link: '/前端/ECMAScript/执行上下文' },
+      { text: 'API', link: '/前端/API/PageLifecycle' },
       { text: '浏览器', link: '/前端/浏览器/图解V8/1.图解V8' },
       { text: '你不知道的JS', link: '/前端/YDKJS/YDKJS(上卷)/1-1 作用域与编译器' },
       { text: 'css世界', link: '/前端/css世界/1.块级元素与width、height' },
@@ -102,6 +118,7 @@ export const sidebar = {
   ],
   '/前端/css世界/': [{ text: 'css', children: dir('前端/css世界') }],
   '/前端/ECMAScript/': [{ text: 'ECMAScript', children: dir('前端/ECMAScript') }],
+  '/前端/API/': [{ text: 'API', children: dir('前端/API') }],
   '/前端/浏览器': [
     { text: 'webkit技术内幕', prefix: 'webkit技术内幕', children: dir('前端/浏览器/webkit技术内幕') },
     { text: '图解V8', prefix: '图解V8', children: dir('前端/浏览器/图解V8') },
@@ -149,7 +166,7 @@ export const sidebar = {
   /* 解决方案 */
   '/解决方案/工程化': [{ text: '工程化', children: dir('解决方案/工程化') }],
   '/解决方案/架构': [{ text: '架构', children: dir('解决方案/架构') }],
-  '/解决方案/性能优化': [{ text: '性能优化', children: dir('解决方案/性能优化') }],
+  '/解决方案/性能优化': [{ text: '性能优化', children: sort(dir('解决方案/性能优化')) }],
   '/解决方案/前端监控': [{ text: '前端监控', children: dir('解决方案/前端监控') }],
   '/解决方案/图片': [{ text: '图片', children: dir('解决方案/图片') }],
 

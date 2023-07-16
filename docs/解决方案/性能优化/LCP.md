@@ -53,7 +53,7 @@ LCP 的最大内容主要考虑**图片和文本**，比如：
 
 ## LCP 阈值
 
-<img src="https://web-dev.imgix.net/image/eqprBhZUGfb8WYnumQ9ljAxRrA72/8ZW8LQsagLih1ZZoOmMR.svg" alt="良好的 LCP 值为 2.5 秒，较差的值大于 4.0 秒，两者之间的任何东西都需要改进" width="400" class="img-mid" />
+<img src="https://raw.githubusercontent.com/yamsfeer/pic-bed/master/8ZW8LQsagLih1ZZoOmMR.svg" alt="良好的 LCP 值为 2.5 秒，较差的值大于 4.0 秒，两者之间的任何东西都需要改进" width="400" class="img-mid" />
 
 ## 如何测量 LCP
 
