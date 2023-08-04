@@ -61,7 +61,7 @@ export const navbar = [
   {
     text: '编程',
     children: [
-      { text: 'leetcode', link: '/编程/leetcode/0.开始' },
+      { text: 'leetcode', link: '/编程/leetcode/0.概述' },
       { text: '手写代码', link: '/编程/手写代码/防抖节流' },
       { text: '数据结构', link: '/编程/数据结构/堆' },
       { text: '经典算法', link: '/编程/经典算法/排序算法' },
@@ -91,7 +91,7 @@ export const navbar = [
     text: '解决方案',
     children: [
       { text: '工程', link: '/解决方案/工程化/工具链' },
-      { text: '架构', link: '/解决方案/架构/组件化' },
+      { text: '架构', link: '/解决方案/架构/架构模式' },
       { text: '性能', link: '/解决方案/性能优化/1.性能概述' },
       { text: '监控', link: '/解决方案/前端监控/1.监控概览' },
       { text: '图片', link: '/解决方案/图片/1.图片格式' },
@@ -137,7 +137,7 @@ export const sidebar = {
   ],
   '/编程/数据结构/': [{ text: '数据结构', children: dir('编程/数据结构') }],
   '/编程/经典算法/': [{ text: '经典算法', children: dir('编程/经典算法') }],
-  '/编程/leetcode/': [{ text: 'leetcode', children: dir('编程/leetcode') }],
+  '/编程/leetcode/': [{ text: 'leetcode', children: sort(dir('编程/leetcode')) }],
   '/编程/手写代码/': [{ text: '手写代码', children: dir('编程/手写代码') }],
   '/编程/设计模式/': [{ text: '设计模式', children: sort(dir('编程/设计模式')) }],
 
@@ -165,7 +165,7 @@ export const sidebar = {
 
   /* 解决方案 */
   '/解决方案/工程化': [{ text: '工程化', children: dir('解决方案/工程化') }],
-  '/解决方案/架构': [{ text: '架构', children: dir('解决方案/架构') }],
+  '/解决方案/架构': [{ text: '架构', children: sort(dir('解决方案/架构')) }],
   '/解决方案/性能优化': [{ text: '性能优化', children: sort(dir('解决方案/性能优化')) }],
   '/解决方案/前端监控': [{ text: '前端监控', children: dir('解决方案/前端监控') }],
   '/解决方案/图片': [{ text: '图片', children: dir('解决方案/图片') }],
