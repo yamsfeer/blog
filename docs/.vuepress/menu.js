@@ -72,9 +72,9 @@ export const navbar = [
   {
     text: '前端',
     children: [
-      { text: 'ECMAScript', link: '/前端/ECMAScript/执行上下文' },
+      { text: 'ECMAScript', link: '/前端/ECMAScript/1.Overview' },
       { text: 'API', link: '/前端/API/PageLifecycle' },
-      { text: '浏览器', link: '/前端/浏览器/图解V8/1.图解V8' },
+      { text: '浏览器', link: '/前端/浏览器/JS引擎/1.V8' },
       { text: '你不知道的JS', link: '/前端/YDKJS/YDKJS(上卷)/1-1 作用域与编译器' },
       { text: 'css世界', link: '/前端/css世界/1.块级元素与width、height' },
     ]
@@ -117,12 +117,12 @@ export const sidebar = {
     { text: '你不知道的JS(下)', prefix: '/YDKJS/YDKJS(下卷)/', children: dir('前端/YDKJS/YDKJS(下卷)') },
   ],
   '/前端/css世界/': [{ text: 'css', children: dir('前端/css世界') }],
-  '/前端/ECMAScript/': [{ text: 'ECMAScript', children: dir('前端/ECMAScript') }],
+  '/前端/ECMAScript/': [{ text: 'ECMAScript', children: sort(dir('前端/ECMAScript')) }],
   '/前端/API/': [{ text: 'API', children: dir('前端/API') }],
   '/前端/浏览器': [
+    { text: '渲染引擎', prefix: '渲染引擎', children: dir('前端/浏览器/渲染引擎') },
+    { text: 'JS引擎', prefix: 'JS引擎', children: sort(dir('前端/浏览器/JS引擎')) },
     { text: 'webkit技术内幕', prefix: 'webkit技术内幕', children: dir('前端/浏览器/webkit技术内幕') },
-    { text: '图解V8', prefix: '图解V8', children: dir('前端/浏览器/图解V8') },
-    { text: '浏览器', children: dir('前端/浏览器') }
   ],
 
   /* 编程 */
