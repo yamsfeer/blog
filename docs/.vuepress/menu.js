@@ -45,17 +45,6 @@ export const navbar = [
       { text: '计算机科学', link: '/计算机基础/计算机科学/计算理论' },
       { text: '汇编语言', link: '/计算机基础/汇编语言/MIPS汇编入门' },
       { text: '操作系统', link: '/计算机基础/操作系统/1.0计算机启动' },
-      {
-        text: '图形学',
-        children: [
-          { text: 'games101', link: '/计算机基础/图形学/现代计算机图形学入门/0.序言' },
-          { text: '线性代数', link: '/计算机基础/数学/线性代数的本质/0.序言' },
-          { text: '几何', link: '/计算机基础/数学/几何/欧几里得几何与非欧几何' },
-          // { text: '图形学API', link: '/图形学/图形学API/webGL' },
-          // { text: '傅里叶变换', link: '/数学/傅里叶变换/傅里叶变换' },
-          // { text: '微积分', link: '/数学/微积分/微积分基本概念' },
-        ]
-      },
     ]
   },
   {
@@ -64,7 +53,7 @@ export const navbar = [
       { text: 'leetcode', link: '/编程/leetcode/0.概述' },
       { text: '手写代码', link: '/编程/手写代码/防抖节流' },
       { text: '数据结构', link: '/编程/数据结构/堆' },
-      { text: '经典算法', link: '/编程/经典算法/排序算法' },
+      // { text: '经典算法', link: '/编程/经典算法/排序算法' },
       { text: '算法分析', link: '/编程/算法设计与分析/开始' },
       { text: '设计模式', link: '/编程/设计模式/1.单例模式' },
     ]
@@ -74,15 +63,22 @@ export const navbar = [
     children: [
       { text: 'ECMAScript', link: '/前端/ECMAScript/1.Overview' },
       { text: 'API', link: '/前端/API/PageLifecycle' },
-      { text: '浏览器', link: '/前端/浏览器/JS引擎/1.V8' },
-      { text: '你不知道的JS', link: '/前端/YDKJS/YDKJS(上卷)/1-1 作用域与编译器' },
+      {
+        text: '浏览器', children: [
+          { text: 'V8引擎', link: '/前端/浏览器/V8引擎/1.execution pipeline' },
+          { text: '编写JS引擎', link: '/前端/浏览器/编写JS引擎/1.概述' },
+          { text: '渲染引擎', link: '/前端/浏览器/渲染引擎/渲染引擎原理' },
+          // { text: 'webkit技术内幕', link: '/前端/浏览器/webkit技术内幕/1.浏览器和浏览器内核' },
+        ]
+      },
+      // { text: '你不知道的JS', link: '/前端/YDKJS/YDKJS(上卷)/1-1 作用域与编译器' },
       { text: 'css世界', link: '/前端/css世界/1.块级元素与width、height' },
     ]
   },
   {
     text: '源码',
     children: [
-      { text: 'vue2', link: '/源码/vue2/1.准备工作' },
+      // { text: 'vue2', link: '/源码/vue2/1.准备工作' },
       { text: 'vue3', link: '/源码/vue3/1.overview' },
       { text: 'webpack', link: '/源码/webpack/1.overview' },
     ]
@@ -100,8 +96,19 @@ export const navbar = [
   {
     text: '领域',
     children: [
-      { text: '颜色', link: '/领域/颜色/颜色' },
-      { text: '游戏', link: '/领域/游戏/游戏' },
+      { text: '游戏', link: '/领域/游戏/游戏引擎' },
+      {
+        text: '图形学',
+        children: [
+          { text: 'games101', link: '/计算机基础/图形学/现代计算机图形学入门/0.序言' },
+          { text: '线性代数', link: '/计算机基础/数学/线性代数的本质/0.序言' },
+          { text: '几何', link: '/计算机基础/数学/几何/欧几里得几何与非欧几何' },
+          // { text: '图形学API', link: '/图形学/图形学API/webGL' },
+          // { text: '傅里叶变换', link: '/数学/傅里叶变换/傅里叶变换' },
+          // { text: '微积分', link: '/数学/微积分/微积分基本概念' },
+        ]
+      },
+      // { text: '颜色', link: '/领域/颜色/颜色' },
     ]
   },
   { text: 'clutter', link: '/clutter/思维导图' },
@@ -119,11 +126,10 @@ export const sidebar = {
   '/前端/css世界/': [{ text: 'css', children: dir('前端/css世界') }],
   '/前端/ECMAScript/': [{ text: 'ECMAScript', children: sort(dir('前端/ECMAScript')) }],
   '/前端/API/': [{ text: 'API', children: dir('前端/API') }],
-  '/前端/浏览器': [
-    { text: '渲染引擎', prefix: '渲染引擎', children: dir('前端/浏览器/渲染引擎') },
-    { text: 'JS引擎', prefix: 'JS引擎', children: sort(dir('前端/浏览器/JS引擎')) },
-    { text: 'webkit技术内幕', prefix: 'webkit技术内幕', children: dir('前端/浏览器/webkit技术内幕') },
-  ],
+  '/前端/浏览器/渲染引擎': [{ text: '渲染引擎', children: dir('前端/浏览器/渲染引擎') }],
+  '/前端/浏览器/编写JS引擎': [{ text: '编写JS引擎', children: sort(dir('前端/浏览器/编写JS引擎')) }],
+  '/前端/浏览器/V8引擎': [{ text: 'V8引擎', children: sort(dir('前端/浏览器/V8引擎')) }],
+  '/前端/浏览器/webkit技术内幕': [{ text: 'webkit技术内幕', children: dir('前端/浏览器/webkit技术内幕') }],
 
   /* 编程 */
   '/编程/算法设计与分析/': [
@@ -155,9 +161,6 @@ export const sidebar = {
   '/计算机基础/数学/微积分/': [{ text: '微积分', children: dir('计算机基础/数学/微积分') }],
   '/计算机基础/数学/傅里叶变换/': [{ text: '傅里叶变换', children: dir('计算机基础/数学/傅里叶变换') }],
 
-  '/计算机基础/图形学/现代计算机图形学入门': [{ text: '现代计算机图形学入门', children: dir('计算机基础/图形学/现代计算机图形学入门') }],
-  '/计算机基础/图形学/图形学API': [{ text: '图形学API', children: dir('计算机基础/图形学/图形学API') }],
-
   /* 源码 */
   '/源码/vue2': [{ text: 'vue2', children: dir('源码/vue2') }],
   '/源码/vue3': [{ text: 'vue3', children: sort(dir('源码/vue3')) }],
@@ -171,6 +174,8 @@ export const sidebar = {
   '/解决方案/图片': [{ text: '图片', children: dir('解决方案/图片') }],
 
   /* 领域 */
-  '/领域/颜色': [{ text: '颜色', children: dir('领域/颜色') }],
+  // '/领域/颜色': [{ text: '颜色', children: dir('领域/颜色') }],
   '/领域/游戏': [{ text: '游戏', children: dir('领域/游戏') }],
+  '/计算机基础/图形学/现代计算机图形学入门': [{ text: '现代计算机图形学入门', children: dir('计算机基础/图形学/现代计算机图形学入门') }],
+  '/计算机基础/图形学/图形学API': [{ text: '图形学API', children: dir('计算机基础/图形学/图形学API') }],
 };
