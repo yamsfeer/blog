@@ -43,8 +43,8 @@ export const navbar = [
       { text: '计算机通识', link: '/计算机基础/计算机通识/RSA算法' },
       { text: '体系结构', link: '/计算机基础/计算机体系结构/冯诺依曼结构' },
       { text: '计算机科学', link: '/计算机基础/计算机科学/计算理论' },
-      { text: '汇编语言', link: '/计算机基础/汇编语言/MIPS汇编入门' },
-      { text: '操作系统', link: '/计算机基础/操作系统/1.0计算机启动' },
+      // { text: '汇编语言', link: '/计算机基础/汇编语言/MIPS汇编入门' },
+      // { text: '操作系统', link: '/计算机基础/操作系统/1.0计算机启动' },
     ]
   },
   {
@@ -52,9 +52,8 @@ export const navbar = [
     children: [
       { text: 'leetcode', link: '/编程/leetcode/0.概述' },
       { text: '手写代码', link: '/编程/手写代码/防抖节流' },
-      { text: '数据结构', link: '/编程/数据结构/堆' },
-      // { text: '经典算法', link: '/编程/经典算法/排序算法' },
-      { text: '算法分析', link: '/编程/算法设计与分析/开始' },
+      { text: '数据结构算法', link: '/编程/数据结构算法/堆' },
+      { text: '算法分析', link: '/编程/算法设计与分析/1.概述' },
       { text: '设计模式', link: '/编程/设计模式/1.单例模式' },
     ]
   },
@@ -62,7 +61,7 @@ export const navbar = [
     text: '前端',
     children: [
       { text: 'ECMAScript', link: '/前端/ECMAScript/1.Overview' },
-      { text: 'API', link: '/前端/API/PageLifecycle' },
+      { text: 'API', link: '/前端/API/Page Lifecycle' },
       {
         text: '浏览器', children: [
           { text: 'V8引擎', link: '/前端/浏览器/V8引擎/1.execution pipeline' },
@@ -86,8 +85,11 @@ export const navbar = [
   {
     text: '解决方案',
     children: [
+      { text: '低代码', link: '/解决方案/低代码/lowcode' },
+      { text: '微前端', link: '/解决方案/微前端/1.微前端' },
+      { text: '组件化', link: '/解决方案/组件化/组件化' },
       { text: '工程', link: '/解决方案/工程化/工具链' },
-      { text: '架构', link: '/解决方案/架构/架构模式' },
+      // { text: '架构', link: '/解决方案/架构/架构模式' },
       { text: '性能', link: '/解决方案/性能优化/1.性能概述' },
       { text: '监控', link: '/解决方案/前端监控/1.监控概览' },
       { text: '图片', link: '/解决方案/图片/1.图片格式' },
@@ -132,18 +134,9 @@ export const sidebar = {
   '/前端/浏览器/webkit技术内幕': [{ text: 'webkit技术内幕', children: dir('前端/浏览器/webkit技术内幕') }],
 
   /* 编程 */
-  '/编程/算法设计与分析/': [
-    { text: '开始', children: [{ text: '开始', link: '编程//算法设计与分析/开始.md' }] },
-    { text: '分治', prefix: '分治/', children: dir('编程/算法设计与分析/分治') },
-    { text: '动态规划', prefix: '动态规划/', children: dir('编程/算法设计与分析/动态规划') },
-    { text: '贪心', prefix: '贪心/', children: dir('编程/算法设计与分析/贪心') },
-    { text: '回溯', prefix: '回溯/', children: dir('编程/算法设计与分析/回溯') },
-    { text: '分支限界', prefix: '分支限界/', children: dir('编程/算法设计与分析/分支限界') },
-    { text: '总结', children: [{ text: '总结', link: '编程//算法设计与分析/总结.md' }] },
-  ],
-  '/编程/数据结构/': [{ text: '数据结构', children: dir('编程/数据结构') }],
-  '/编程/经典算法/': [{ text: '经典算法', children: dir('编程/经典算法') }],
+  '/编程/算法设计与分析/': [{ text: '算法设计与分析', children: sort(dir('编程/算法设计与分析/')) }],
   '/编程/leetcode/': [{ text: 'leetcode', children: sort(dir('编程/leetcode')) }],
+  '/编程/数据结构算法/': [{ text: '数据结构算法', children: dir('编程/数据结构算法') }],
   '/编程/手写代码/': [{ text: '手写代码', children: dir('编程/手写代码') }],
   '/编程/设计模式/': [{ text: '设计模式', children: sort(dir('编程/设计模式')) }],
 
@@ -167,6 +160,9 @@ export const sidebar = {
   '/源码/webpack': [{ text: 'webpack', children: sort(dir('源码/webpack')) }],
 
   /* 解决方案 */
+  '/解决方案/低代码': [{ text: '低代码', children: dir('解决方案/低代码') }],
+  '/解决方案/微前端': [{ text: '微前端', children: dir('解决方案/微前端') }],
+  '/解决方案/组件化': [{ text: '组件化', children: dir('解决方案/组件化') }],
   '/解决方案/工程化': [{ text: '工程化', children: dir('解决方案/工程化') }],
   '/解决方案/架构': [{ text: '架构', children: sort(dir('解决方案/架构')) }],
   '/解决方案/性能优化': [{ text: '性能优化', children: sort(dir('解决方案/性能优化')) }],
