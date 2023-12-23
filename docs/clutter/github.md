@@ -1,12 +1,12 @@
-## github
+# github
 
 github 除了 git 管理代码仓库的能力，还提供了一些额外的功能。
 
-* Github Actions，用于 CI / CD
-* Github Packages，发布 NPM 包等
-* Github Pages，发布静态页面
-* Github Codespaces，线上代码开发
-* Github Gist，记录代码片段
+- Github Actions，用于 CI / CD
+- Github Packages，发布 NPM 包等
+- Github Pages，发布静态页面
+- Github Codespaces，线上代码开发
+- Github Gist，记录代码片段
 
 [github docs](https://docs.github.com/) 中对这些功能都有详细介绍。
 
@@ -14,8 +14,8 @@ github 除了 git 管理代码仓库的能力，还提供了一些额外的功�
 
 github actions 可以设置你的 github 工作流，主要用于 CI / CD。
 
-* 持续集成 ( Continuous Integration, CI )，将代码集成到共享代码仓库，并自动化构建、测试和验证。
-* 持续部署 ( Continuous Deployment, CD )，在 CI 的基础上，将代码自动交付到生产环境。
+- 持续集成 ( Continuous Integration, CI )，将代码集成到共享代码仓库，并自动化构建、测试和验证。
+- 持续部署 ( Continuous Deployment, CD )，在 CI 的基础上，将代码自动交付到生产环境。
 
 下面是一个使用 vuepress 的博客仓库的工作流设置。
 
@@ -24,9 +24,9 @@ name: build my blog
 
 on: # 执行时机
   push:
-    branches: [ "master" ] # push 代码到 master 分支时执行
+    branches: ['master'] # push 代码到 master 分支时执行
   pull_request:
-    branches: [ "master" ] # merge 代码到 master 分支时执行
+    branches: ['master'] # merge 代码到 master 分支时执行
   workflow_dispatch: # 允许手动执行
 
 jobs: # 一个工作流由一个或多个 job 组成
@@ -38,7 +38,7 @@ jobs: # 一个工作流由一个或多个 job 组成
       - uses: pnpm/action-setup@v2.2.2 # 用 pnpm 作为包管理
         with:
           version: 8.1.1
-          
+
       - name: Use Node.js ${{ matrix.node-version }} # 设置 node 版本
         uses: actions/setup-node@v2
         with:
@@ -50,7 +50,7 @@ jobs: # 一个工作流由一个或多个 job 组成
         env:
           NODE_OPTIONS: --max_old_space_size=4096
         run: pnpm run build # 执行打包命令
-        
+
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v3
         with:
@@ -66,9 +66,9 @@ jobs: # 一个工作流由一个或多个 job 组成
 
 首先明确 npm registry 的概念，npm、yarn、pnpm 等包管理工具下载 npm 包，默认 registry 都是 npm 官方提供的仓库，github 也提供了类似的仓库。此外还有其他镜像库，它们都是 npm registry。
 
-* npm 官方仓库： https://registry.npmjs.org
-* github package 仓库：https://npm.pkg.github.com
-* 其他 npm 仓库镜像：https://registry.npmmirror.com
+- npm 官方仓库： https://registry.npmjs.org
+- github package 仓库：https://npm.pkg.github.com
+- 其他 npm 仓库镜像：https://registry.npmmirror.com
 
 当然，无论是什么仓库，我们发布的都是 npm 包 ( 用 package.json 描述 )。
 
