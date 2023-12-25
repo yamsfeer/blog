@@ -122,8 +122,6 @@ export const navbar = [
       { text: 'games104', link: '/图形学/games104/1.导论' },
       { text: 'webGPU', link: '/图形学/webGPU/1.webGPU' },
       { text: '虚幻引擎', link: '/图形学/unreal/1.概览' },
-      { text: '线性代数', link: '/图形学/数学/线性代数的本质/0.序言' },
-      { text: '几何', link: '/图形学/数学/几何/欧几里得几何与非欧几何' },
     ],
   },
   { text: 'clutter', link: '/clutter/思维导图' },
@@ -195,13 +193,10 @@ export const sidebar = {
     { text: '计算机科学', children: dir('计算机基础/计算机科学') },
   ],
   '/计算机基础/计算机体系结构': [
-    { text: '计算机体系结构', children: dir('计算机基础/计算机体系结构') },
+    { text: '计算机体系结构', children: dir('计算机基础/体系结构') },
   ],
   '/计算机基础/计算机通识': [
     { text: '计算机通识', children: dir('计算机基础/计算机通识') },
-  ],
-  '/计算机基础/汇编语言': [
-    { text: '汇编语言', children: dir('计算机基础/汇编语言') },
   ],
   '/计算机基础/操作系统': [
     { text: '操作系统', children: dir('计算机基础/操作系统') },
@@ -237,17 +232,4 @@ export const sidebar = {
   '/图形学/games104': [{ text: 'games104', children: dir('图形学/games104') }],
   '/图形学/webGPU': [{ text: 'webGPU', children: dir('图形学/webGPU') }],
   '/图形学/unreal': [{ text: 'unreal', children: dir('图形学/unreal') }],
-  '/图形学/数学/线性代数的本质/': [
-    {
-      text: '线性代数的本质',
-      children: sort(dir('图形学/数学/线性代数的本质')),
-    },
-  ],
-  '/图形学/数学/几何/': [{ text: '几何', children: dir('图形学/数学/几何') }],
-  '/图形学/数学/微积分/': [
-    { text: '微积分', children: dir('图形学/数学/微积分') },
-  ],
-  '/图形学/数学/傅里叶变换/': [
-    { text: '傅里叶变换', children: dir('图形学/数学/傅里叶变换') },
-  ],
 }
