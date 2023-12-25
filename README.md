@@ -1,1 +1,1 @@
-[https://yamsfeer.github.io/blog](https://yamsfeer.github.io/blog)
+computer science notes

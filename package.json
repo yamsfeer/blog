@@ -1,27 +1,13 @@
 {
-  "name": "blog",
+  "name": "notes-cs",
   "version": "1.0.0",
-  "description": "yamsfeer's blog",
-  "main": "index.js",
+  "description": "yamsfeer's computer science notes",
   "scripts": {
     "start": "vuepress dev docs",
     "build": "vuepress build docs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yamsfeer/blog.git"
-  },
-  "keywords": [
-    "blog",
-    "frontend",
-    "javascript"
-  ],
   "author": "yamsfeer",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yamsfeer/blog/issues"
-  },
-  "homepage": "https://github.com/yamsfeer/blog#readme",
   "dependencies": {
     "@vuepress/client": "2.0.0-beta.67",
     "vue": "^3.3.4",

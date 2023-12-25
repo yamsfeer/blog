@@ -1,19 +1,17 @@
 import { defineUserConfig } from 'vuepress'
-import { hopeTheme } from "vuepress-theme-hope"
+import { hopeTheme } from 'vuepress-theme-hope'
 // import { searchPlugin } from '@vuepress/plugin-search'
 import { searchProPlugin } from 'vuepress-plugin-search-pro'
 
-import { navbar, sidebar } from './menu';
+import { navbar, sidebar } from './menu'
 
 const config = {
-  // 发布到github page后路径需要有前缀'blog'
+  // 发布到github page后路径需要有前缀'notes-cs'
   // 应当总是以斜杠开始，并以斜杠结束
   // 一个 base 路径一旦被设置，它将会自动地作为前缀插入到 .vuepress/config.js 中所有以 / 开始的资源路径中
-  base: '/blog/',
+  base: '/notes-cs/',
   title: 'yamsfeer',
-  head: [
-    ['link', { rel: 'icon', href: '/logo.ico' }],
-  ],
+  head: [['link', { rel: 'icon', href: '/logo.ico' }]],
   shouldPrefetch: false, // pwa
 
   plugins: [searchProPlugin({ indexContent: true })],
@@ -29,8 +27,8 @@ const config = {
     sidebar,
 
     hostname: 'https://yamsfeer.github.io',
-    repo: "https://github.com/yamsfeer",
-    repoLabel: "GitHub",
+    repo: 'https://github.com/yamsfeer',
+    repoLabel: 'GitHub',
     repoDisplay: true,
 
     /* 页面主题配置 */
