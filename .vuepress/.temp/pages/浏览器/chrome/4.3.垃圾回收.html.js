@@ -1,0 +1,16 @@
+import comp from "/Users/yams/github/notes-fe/.vuepress/.temp/pages/浏览器/chrome/4.3.垃圾回收.html.vue"
+const data = JSON.parse("{\"path\":\"/%E6%B5%8F%E8%A7%88%E5%99%A8/chrome/4.3.%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6.html\",\"title\":\"Garbage Collection\",\"lang\":\"zh-CN\",\"frontmatter\":{\"description\":\"Garbage Collection 垃圾回收分为以下三步： 标记堆中的活动对象和非活动对象 从 GC Root ( window、document 等对象 ) 出发，遍历所有能到达的对象，能到达就是可访问的 ( reachable )，称为活动对象，不能到达的 ( unreachable ) 称为非活动对象。 回收非活动对象占据的内存 标记完成之后，...\",\"head\":[[\"meta\",{\"property\":\"og:url\",\"content\":\"https://yamsfeer.github.io/notes-fe/%E6%B5%8F%E8%A7%88%E5%99%A8/chrome/4.3.%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6.html\"}],[\"meta\",{\"property\":\"og:site_name\",\"content\":\"yamsfeer\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"Garbage Collection\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"Garbage Collection 垃圾回收分为以下三步： 标记堆中的活动对象和非活动对象 从 GC Root ( window、document 等对象 ) 出发，遍历所有能到达的对象，能到达就是可访问的 ( reachable )，称为活动对象，不能到达的 ( unreachable ) 称为非活动对象。 回收非活动对象占据的内存 标记完成之后，...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://raw.githubusercontent.com/yamsfeer/pic-bed/master/008i3skNgy1gwdx96vx7nj31rg0q9q4b.jpg\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"Garbage Collection\\\",\\\"image\\\":[\\\"https://raw.githubusercontent.com/yamsfeer/pic-bed/master/008i3skNgy1gwdx96vx7nj31rg0q9q4b.jpg\\\"],\\\"dateModified\\\":null,\\\"author\\\":[]}\"]]},\"headers\":[{\"level\":2,\"title\":\"副垃圾回收器 ( Scavenge )\",\"slug\":\"副垃圾回收器-scavenge\",\"link\":\"#副垃圾回收器-scavenge\",\"children\":[]},{\"level\":2,\"title\":\"主垃圾回收器 ( mark-compact )\",\"slug\":\"主垃圾回收器-mark-compact\",\"link\":\"#主垃圾回收器-mark-compact\",\"children\":[]},{\"level\":2,\"title\":\"优化回收效率\",\"slug\":\"优化回收效率\",\"link\":\"#优化回收效率\",\"children\":[{\"level\":3,\"title\":\"并行回收\",\"slug\":\"并行回收\",\"link\":\"#并行回收\",\"children\":[]},{\"level\":3,\"title\":\"增量回收\",\"slug\":\"增量回收\",\"link\":\"#增量回收\",\"children\":[]},{\"level\":3,\"title\":\"并发回收\",\"slug\":\"并发回收\",\"link\":\"#并发回收\",\"children\":[]},{\"level\":3,\"title\":\"小结\",\"slug\":\"小结\",\"link\":\"#小结\",\"children\":[]}]},{\"level\":2,\"title\":\"优化内存问题\",\"slug\":\"优化内存问题\",\"link\":\"#优化内存问题\",\"children\":[{\"level\":3,\"title\":\"内存泄漏 ( Memory leak )\",\"slug\":\"内存泄漏-memory-leak\",\"link\":\"#内存泄漏-memory-leak\",\"children\":[]},{\"level\":3,\"title\":\"内存膨胀 ( Memory bloat )\",\"slug\":\"内存膨胀-memory-bloat\",\"link\":\"#内存膨胀-memory-bloat\",\"children\":[]},{\"level\":3,\"title\":\"频繁垃圾回收\",\"slug\":\"频繁垃圾回收\",\"link\":\"#频繁垃圾回收\",\"children\":[]}]}],\"readingTime\":{\"minutes\":6.82,\"words\":2045},\"filePathRelative\":\"浏览器/chrome/4.3.垃圾回收.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

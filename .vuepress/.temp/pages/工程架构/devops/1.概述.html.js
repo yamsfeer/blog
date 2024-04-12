@@ -1,0 +1,16 @@
+import comp from "/Users/yams/github/notes-fe/.vuepress/.temp/pages/工程架构/devops/1.概述.html.vue"
+const data = JSON.parse("{\"path\":\"/%E5%B7%A5%E7%A8%8B%E6%9E%B6%E6%9E%84/devops/1.%E6%A6%82%E8%BF%B0.html\",\"title\":\"前端工程化\",\"lang\":\"zh-CN\",\"frontmatter\":{\"description\":\"前端工程化 工程化就是以提升效率，降低成本、质量保证为目的的一系列手段。 前端工程化可以分为开发、构建、发布等一系列过程。 基础知识 模块化 包管理器 开发前 开发规范 任务拆解排期 开发流 脚手架 测试 单元测试 集成测试 e2e 测试 灰度测试 构建流 code review sonar 代码质量管理。 发布流 CI/CD 运维 线上监控 消息推送...\",\"head\":[[\"meta\",{\"property\":\"og:url\",\"content\":\"https://yamsfeer.github.io/notes-fe/%E5%B7%A5%E7%A8%8B%E6%9E%B6%E6%9E%84/devops/1.%E6%A6%82%E8%BF%B0.html\"}],[\"meta\",{\"property\":\"og:site_name\",\"content\":\"yamsfeer\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"前端工程化\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"前端工程化 工程化就是以提升效率，降低成本、质量保证为目的的一系列手段。 前端工程化可以分为开发、构建、发布等一系列过程。 基础知识 模块化 包管理器 开发前 开发规范 任务拆解排期 开发流 脚手架 测试 单元测试 集成测试 e2e 测试 灰度测试 构建流 code review sonar 代码质量管理。 发布流 CI/CD 运维 线上监控 消息推送...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"前端工程化\\\",\\\"image\\\":[\\\"\\\"],\\\"dateModified\\\":null,\\\"author\\\":[]}\"]]},\"headers\":[{\"level\":2,\"title\":\"基础知识\",\"slug\":\"基础知识\",\"link\":\"#基础知识\",\"children\":[{\"level\":3,\"title\":\"模块化\",\"slug\":\"模块化\",\"link\":\"#模块化\",\"children\":[]},{\"level\":3,\"title\":\"包管理器\",\"slug\":\"包管理器\",\"link\":\"#包管理器\",\"children\":[]}]},{\"level\":2,\"title\":\"开发前\",\"slug\":\"开发前\",\"link\":\"#开发前\",\"children\":[{\"level\":3,\"title\":\"开发规范\",\"slug\":\"开发规范\",\"link\":\"#开发规范\",\"children\":[]},{\"level\":3,\"title\":\"任务拆解排期\",\"slug\":\"任务拆解排期\",\"link\":\"#任务拆解排期\",\"children\":[]}]},{\"level\":2,\"title\":\"开发流\",\"slug\":\"开发流\",\"link\":\"#开发流\",\"children\":[{\"level\":3,\"title\":\"脚手架\",\"slug\":\"脚手架\",\"link\":\"#脚手架\",\"children\":[]},{\"level\":3,\"title\":\"测试\",\"slug\":\"测试\",\"link\":\"#测试\",\"children\":[]}]},{\"level\":2,\"title\":\"构建流\",\"slug\":\"构建流\",\"link\":\"#构建流\",\"children\":[{\"level\":3,\"title\":\"code review\",\"slug\":\"code-review\",\"link\":\"#code-review\",\"children\":[]}]},{\"level\":2,\"title\":\"发布流\",\"slug\":\"发布流\",\"link\":\"#发布流\",\"children\":[{\"level\":3,\"title\":\"CI/CD\",\"slug\":\"ci-cd\",\"link\":\"#ci-cd\",\"children\":[]}]},{\"level\":2,\"title\":\"运维\",\"slug\":\"运维\",\"link\":\"#运维\",\"children\":[{\"level\":3,\"title\":\"线上监控\",\"slug\":\"线上监控\",\"link\":\"#线上监控\",\"children\":[]},{\"level\":3,\"title\":\"消息推送\",\"slug\":\"消息推送\",\"link\":\"#消息推送\",\"children\":[]},{\"level\":3,\"title\":\"日志管理\",\"slug\":\"日志管理\",\"link\":\"#日志管理\",\"children\":[]}]},{\"level\":2,\"title\":\"工具链\",\"slug\":\"工具链\",\"link\":\"#工具链\",\"children\":[]}],\"readingTime\":{\"minutes\":0.49,\"words\":146},\"filePathRelative\":\"工程架构/devops/1.概述.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

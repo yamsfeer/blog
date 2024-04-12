@@ -1,0 +1,151 @@
+{
+  "hash": "844c8286",
+  "configHash": "467ae7fe",
+  "lockfileHash": "5c443185",
+  "browserHash": "eeec1a8b",
+  "optimized": {
+    "mermaid": {
+      "src": "../../../node_modules/.pnpm/mermaid@10.9.0/node_modules/mermaid/dist/mermaid.core.mjs",
+      "file": "mermaid.js",
+      "fileHash": "303b5a65",
+      "needsInterop": false
+    },
+    "@vue/devtools-api": {
+      "src": "../../../node_modules/.pnpm/@vue+devtools-api@6.6.1/node_modules/@vue/devtools-api/lib/esm/index.js",
+      "file": "@vue_devtools-api.js",
+      "fileHash": "cf3d3bc9",
+      "needsInterop": false
+    },
+    "@vuepress/shared": {
+      "src": "../../../node_modules/.pnpm/@vuepress+shared@2.0.0-rc.9/node_modules/@vuepress/shared/dist/index.js",
+      "file": "@vuepress_shared.js",
+      "fileHash": "1c4e16c5",
+      "needsInterop": false
+    },
+    "vue": {
+      "src": "../../../node_modules/.pnpm/vue@3.4.21/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "1969920b",
+      "needsInterop": false
+    },
+    "vue-router": {
+      "src": "../../../node_modules/.pnpm/vue-router@4.3.0_vue@3.4.21/node_modules/vue-router/dist/vue-router.esm-bundler.js",
+      "file": "vue-router.js",
+      "fileHash": "0ebaa4d6",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "timeline-definition-fea2a41d-4P5NAA3J": {
+      "file": "timeline-definition-fea2a41d-4P5NAA3J.js"
+    },
+    "mindmap-definition-f354de21-EJZM47J2": {
+      "file": "mindmap-definition-f354de21-EJZM47J2.js"
+    },
+    "sankeyDiagram-97764748-J4AYVDR6": {
+      "file": "sankeyDiagram-97764748-J4AYVDR6.js"
+    },
+    "blockDiagram-91b80b7a-3UUZ3CW6": {
+      "file": "blockDiagram-91b80b7a-3UUZ3CW6.js"
+    },
+    "requirementDiagram-05bf5f74-TIBUG6NR": {
+      "file": "requirementDiagram-05bf5f74-TIBUG6NR.js"
+    },
+    "sequenceDiagram-acc0e65c-SPMMODXJ": {
+      "file": "sequenceDiagram-acc0e65c-SPMMODXJ.js"
+    },
+    "classDiagram-30eddba6-OCNW66FN": {
+      "file": "classDiagram-30eddba6-OCNW66FN.js"
+    },
+    "classDiagram-v2-f2df5561-FZV4R56M": {
+      "file": "classDiagram-v2-f2df5561-FZV4R56M.js"
+    },
+    "chunk-RZR4DWRZ": {
+      "file": "chunk-RZR4DWRZ.js"
+    },
+    "stateDiagram-0ff1cf1a-I4SK45ZD": {
+      "file": "stateDiagram-0ff1cf1a-I4SK45ZD.js"
+    },
+    "stateDiagram-v2-9a9d610d-SZPBFMBN": {
+      "file": "stateDiagram-v2-9a9d610d-SZPBFMBN.js"
+    },
+    "chunk-OXITM7ZK": {
+      "file": "chunk-OXITM7ZK.js"
+    },
+    "journeyDiagram-4fe6b3dc-6EBP4LQD": {
+      "file": "journeyDiagram-4fe6b3dc-6EBP4LQD.js"
+    },
+    "flowchart-elk-definition-5fe447d6-LRMXNV5Z": {
+      "file": "flowchart-elk-definition-5fe447d6-LRMXNV5Z.js"
+    },
+    "flowDiagram-v2-3b53844e-7P6ZD7AB": {
+      "file": "flowDiagram-v2-3b53844e-7P6ZD7AB.js"
+    },
+    "erDiagram-47591fe2-WIMC2T3H": {
+      "file": "erDiagram-47591fe2-WIMC2T3H.js"
+    },
+    "gitGraphDiagram-96e6b4ee-PS3J3N4K": {
+      "file": "gitGraphDiagram-96e6b4ee-PS3J3N4K.js"
+    },
+    "ganttDiagram-9a3bba1f-JTSEHACB": {
+      "file": "ganttDiagram-9a3bba1f-JTSEHACB.js"
+    },
+    "infoDiagram-bcd20f53-2ARNUETS": {
+      "file": "infoDiagram-bcd20f53-2ARNUETS.js"
+    },
+    "pieDiagram-79897490-33AIUGGO": {
+      "file": "pieDiagram-79897490-33AIUGGO.js"
+    },
+    "quadrantDiagram-62f64e94-3ANEKHR2": {
+      "file": "quadrantDiagram-62f64e94-3ANEKHR2.js"
+    },
+    "xychartDiagram-ab372869-RVZRMHGN": {
+      "file": "xychartDiagram-ab372869-RVZRMHGN.js"
+    },
+    "chunk-2I2ICIRQ": {
+      "file": "chunk-2I2ICIRQ.js"
+    },
+    "chunk-OOO2W3XR": {
+      "file": "chunk-OOO2W3XR.js"
+    },
+    "katex-ULU5NP7F": {
+      "file": "katex-ULU5NP7F.js"
+    },
+    "c4Diagram-b2a90758-5E7UP2JH": {
+      "file": "c4Diagram-b2a90758-5E7UP2JH.js"
+    },
+    "chunk-FBPW7DOL": {
+      "file": "chunk-FBPW7DOL.js"
+    },
+    "flowDiagram-5540d9b9-VQOR25QE": {
+      "file": "flowDiagram-5540d9b9-VQOR25QE.js"
+    },
+    "chunk-ZATECEGX": {
+      "file": "chunk-ZATECEGX.js"
+    },
+    "chunk-SNHZFICM": {
+      "file": "chunk-SNHZFICM.js"
+    },
+    "chunk-GWNTOUDJ": {
+      "file": "chunk-GWNTOUDJ.js"
+    },
+    "chunk-2SONE66B": {
+      "file": "chunk-2SONE66B.js"
+    },
+    "chunk-AOE3DBIU": {
+      "file": "chunk-AOE3DBIU.js"
+    },
+    "chunk-BSEYONYF": {
+      "file": "chunk-BSEYONYF.js"
+    },
+    "chunk-GVRB6UXK": {
+      "file": "chunk-GVRB6UXK.js"
+    },
+    "chunk-GP36KRM6": {
+      "file": "chunk-GP36KRM6.js"
+    },
+    "chunk-3EJPJMEH": {
+      "file": "chunk-3EJPJMEH.js"
+    }
+  }
+}

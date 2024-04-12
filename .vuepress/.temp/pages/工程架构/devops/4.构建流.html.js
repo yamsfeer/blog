@@ -1,0 +1,16 @@
+import comp from "/Users/yams/github/notes-fe/.vuepress/.temp/pages/工程架构/devops/4.构建流.html.vue"
+const data = JSON.parse("{\"path\":\"/%E5%B7%A5%E7%A8%8B%E6%9E%B6%E6%9E%84/devops/4.%E6%9E%84%E5%BB%BA%E6%B5%81.html\",\"title\":\"构建工具\",\"lang\":\"zh-CN\",\"frontmatter\":{\"description\":\"构建工具 构建工具指标 代码分割 code splitting 哈希 hashing hash chunkhash contenthash 模块化方案 importing modules 非 JS 资源 Non-Javascript resources Output module formats Transformations webpack vite...\",\"head\":[[\"meta\",{\"property\":\"og:url\",\"content\":\"https://yamsfeer.github.io/notes-fe/%E5%B7%A5%E7%A8%8B%E6%9E%B6%E6%9E%84/devops/4.%E6%9E%84%E5%BB%BA%E6%B5%81.html\"}],[\"meta\",{\"property\":\"og:site_name\",\"content\":\"yamsfeer\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"构建工具\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"构建工具 构建工具指标 代码分割 code splitting 哈希 hashing hash chunkhash contenthash 模块化方案 importing modules 非 JS 资源 Non-Javascript resources Output module formats Transformations webpack vite...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"构建工具\\\",\\\"image\\\":[\\\"\\\"],\\\"dateModified\\\":null,\\\"author\\\":[]}\"]]},\"headers\":[{\"level\":2,\"title\":\"构建工具指标\",\"slug\":\"构建工具指标\",\"link\":\"#构建工具指标\",\"children\":[{\"level\":3,\"title\":\"代码分割 code splitting\",\"slug\":\"代码分割-code-splitting\",\"link\":\"#代码分割-code-splitting\",\"children\":[]},{\"level\":3,\"title\":\"哈希 hashing\",\"slug\":\"哈希-hashing\",\"link\":\"#哈希-hashing\",\"children\":[]},{\"level\":3,\"title\":\"模块化方案 importing modules\",\"slug\":\"模块化方案-importing-modules\",\"link\":\"#模块化方案-importing-modules\",\"children\":[]},{\"level\":3,\"title\":\"非 JS 资源 Non-Javascript resources\",\"slug\":\"非-js-资源-non-javascript-resources\",\"link\":\"#非-js-资源-non-javascript-resources\",\"children\":[]},{\"level\":3,\"title\":\"Output module formats\",\"slug\":\"output-module-formats\",\"link\":\"#output-module-formats\",\"children\":[]},{\"level\":3,\"title\":\"Transformations\",\"slug\":\"transformations\",\"link\":\"#transformations\",\"children\":[]}]},{\"level\":2,\"title\":\"webpack\",\"slug\":\"webpack\",\"link\":\"#webpack\",\"children\":[]},{\"level\":2,\"title\":\"vite\",\"slug\":\"vite\",\"link\":\"#vite\",\"children\":[]},{\"level\":2,\"title\":\"FAQ\",\"slug\":\"faq\",\"link\":\"#faq\",\"children\":[{\"level\":3,\"title\":\"webpack、babel、typepscript 是如何协作的\",\"slug\":\"webpack、babel、typepscript-是如何协作的\",\"link\":\"#webpack、babel、typepscript-是如何协作的\",\"children\":[]},{\"level\":3,\"title\":\"路径寻找\",\"slug\":\"路径寻找\",\"link\":\"#路径寻找\",\"children\":[]}]}],\"readingTime\":{\"minutes\":0.39,\"words\":117},\"filePathRelative\":\"工程架构/devops/4.构建流.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

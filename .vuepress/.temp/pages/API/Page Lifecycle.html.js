@@ -1,0 +1,16 @@
+import comp from "/Users/yams/github/notes-fe/.vuepress/.temp/pages/API/Page Lifecycle.html.vue"
+const data = JSON.parse("{\"path\":\"/API/Page%20Lifecycle.html\",\"title\":\"Page Lifecycle API\",\"lang\":\"zh-CN\",\"frontmatter\":{\"description\":\"Page Lifecycle API Page Lifecycle API 是由 WICG ( 不是 W3C ) 制定的标准，它统一了网页生命周期内的行为模式。生命周期的状态，以及这些状态之间转换的事件，可以用下图来表示 ( 原图链接 )： States 网页的生命周期有 6 种状态，每个时刻只能处于其中一个状态。 Active：网页可见，拥有输入焦点...\",\"head\":[[\"meta\",{\"property\":\"og:url\",\"content\":\"https://yamsfeer.github.io/notes-fe/API/Page%20Lifecycle.html\"}],[\"meta\",{\"property\":\"og:site_name\",\"content\":\"yamsfeer\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"Page Lifecycle API\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"Page Lifecycle API Page Lifecycle API 是由 WICG ( 不是 W3C ) 制定的标准，它统一了网页生命周期内的行为模式。生命周期的状态，以及这些状态之间转换的事件，可以用下图来表示 ( 原图链接 )： States 网页的生命周期有 6 种状态，每个时刻只能处于其中一个状态。 Active：网页可见，拥有输入焦点...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://raw.githubusercontent.com/yamsfeer/pic-bed/master/Page-Lifecycle.svg\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"Page Lifecycle API\\\",\\\"image\\\":[\\\"https://raw.githubusercontent.com/yamsfeer/pic-bed/master/Page-Lifecycle.svg\\\"],\\\"dateModified\\\":null,\\\"author\\\":[]}\"]]},\"headers\":[{\"level\":2,\"title\":\"States\",\"slug\":\"states\",\"link\":\"#states\",\"children\":[]},{\"level\":2,\"title\":\"Events\",\"slug\":\"events\",\"link\":\"#events\",\"children\":[{\"level\":3,\"title\":\"freeze 和 resume\",\"slug\":\"freeze-和-resume\",\"link\":\"#freeze-和-resume\",\"children\":[]},{\"level\":3,\"title\":\"Discarded\",\"slug\":\"discarded\",\"link\":\"#discarded\",\"children\":[]}]},{\"level\":2,\"title\":\"观察页面状态\",\"slug\":\"观察页面状态\",\"link\":\"#观察页面状态\",\"children\":[{\"level\":3,\"title\":\"获取当前状态\",\"slug\":\"获取当前状态\",\"link\":\"#获取当前状态\",\"children\":[]},{\"level\":3,\"title\":\"通过事件观察状态变化\",\"slug\":\"通过事件观察状态变化\",\"link\":\"#通过事件观察状态变化\",\"children\":[]}]},{\"level\":2,\"title\":\"应避免使用的事件\",\"slug\":\"应避免使用的事件\",\"link\":\"#应避免使用的事件\",\"children\":[{\"level\":3,\"title\":\"unload 事件\",\"slug\":\"unload-事件\",\"link\":\"#unload-事件\",\"children\":[]},{\"level\":3,\"title\":\"beforeunload 事件\",\"slug\":\"beforeunload-事件\",\"link\":\"#beforeunload-事件\",\"children\":[]}]},{\"level\":2,\"title\":\"针对页面状态的建议\",\"slug\":\"针对页面状态的建议\",\"link\":\"#针对页面状态的建议\",\"children\":[]},{\"level\":2,\"title\":\"安全的 freeze 和 discard\",\"slug\":\"安全的-freeze-和-discard\",\"link\":\"#安全的-freeze-和-discard\",\"children\":[]},{\"level\":2,\"title\":\"参考\",\"slug\":\"参考\",\"link\":\"#参考\",\"children\":[]}],\"readingTime\":{\"minutes\":8.05,\"words\":2415},\"filePathRelative\":\"API/Page Lifecycle.md\",\"autoDesc\":true}")
+export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}
